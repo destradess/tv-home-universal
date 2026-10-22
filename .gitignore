@@ -1,0 +1,10 @@
+.local/
+dist/
+*.apk
+*.apk.idsig
+*.keystore
+*.jks
+*.zip
+*.log
+local.properties
+.idea/
