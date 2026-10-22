@@ -116,4 +116,12 @@ Based on [TV Home by Mihir Gupta](https://github.com/mihirgupta0900/tv-home), wi
 
 This product uses the TMDB API but is not endorsed or certified by TMDB. Online imagery belongs to its respective rights holders.
 
+## Screenshots
+
+### Home
+![TV Home Universal home screen](docs/screenshots/home.png)
+
+### Quick Settings
+![TV Home Universal quick settings](docs/screenshots/quick-settings.png)
+
 See [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
