@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="override_service_label">TV Home — Override Launcher</string>
+    <string name="override_service_description">Redirects Home and the Google TV home screen to TV Home when override is enabled. The Google TV shortcut can still be used. Observes app identity and the Home button without reading screen content or sending data online.</string>
+</resources>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ui_001" formatted="false">&quot; (Terhubung)&quot;</string>
+    <string name="ui_002" formatted="false">&quot; (belum tersedia)&quot;</string>
+    <string name="ui_003" formatted="false">&quot; aktif&quot;</string>
+    <string name="ui_004" formatted="false">&quot; belum tersedia; memakai cache/cadangan.&quot;</string>
+    <string name="ui_005" formatted="false">&quot; memakai akses publik tanpa API key.&quot;</string>
+    <string name="ui_006" formatted="false">&quot; menit&quot;</string>
+    <string name="ui_007" formatted="false">&quot; pada pengaturan Wi-Fi TV.&quot;</string>
+    <string name="ui_008" formatted="false">&quot; terlebih dahulu.&quot;</string>
+    <string name="ui_009" formatted="false">&quot; · Baris Utama&quot;</string>
+    <string name="ui_010" formatted="false">&quot; · Semua Aplikasi&quot;</string>
+    <string name="ui_011" formatted="false">&quot; · Belum tersedia; cek jaringan/kota&quot;</string>
+    <string name="ui_012" formatted="false">&quot; · Memuat&quot;</string>
+    <string name="ui_013" formatted="false">&quot;, salat berikutnya&quot;</string>
+    <string name="ui_014" formatted="false">&quot;Kunci API&quot;</string>
+    <string name="ui_015" formatted="false">&quot;Sumber API&quot;</string>
+    <string name="ui_016" formatted="false">&quot;Sumber API: &quot;</string>
+    <string name="ui_017" formatted="false">&quot;Sumber API: TMDB&quot;</string>
+    <string name="ui_018" formatted="false">&quot;APLIKASI LAINNYA · TAHAN OK UNTUK ATUR&quot;</string>
+    <string name="ui_019" formatted="false">&quot;ASAR&quot;</string>
+    <string name="ui_020" formatted="false">&quot;Aktifkan Google TV&quot;</string>
+    <string name="ui_021" formatted="false">&quot;Aktifkan Lokasi di setelan TV untuk memindai Wi-Fi.&quot;</string>
+    <string name="ui_022" formatted="false">&quot;Aktifkan Override&quot;</string>
+    <string name="ui_023" formatted="false">&quot;Aktifkan layanan aksesibilitas TV Home untuk membuka menu daya TV.&quot;</string>
+    <string name="ui_024" formatted="false">&quot;Semua Input...&quot;</string>
+    <string name="ui_025" formatted="false">&quot;Antariksa&quot;</string>
+    <string name="ui_026" formatted="false">&quot;Batal&quot;</string>
+    <string name="ui_027" formatted="false">&quot;Belum ada gambar dari sumber ini yang ditampilkan.&quot;</string>
+    <string name="ui_028" formatted="false">&quot;Belum ada gambar tontonan tersimpan; memakai wallpaper bawaan.&quot;</string>
+    <string name="ui_029" formatted="false">&quot;Belum ada jaringan. Coba Pindai Ulang.&quot;</string>
+    <string name="ui_030" formatted="false">&quot;Belum tersimpan: izin mengubah waktu sistem belum diberikan.&quot;</string>
+    <string name="ui_031" formatted="false">&quot;Belum tersimpan: waktu Sleep harus lebih lama dari Screensaver.&quot;</string>
+    <string name="ui_032" formatted="false">&quot;Buka Aksesibilitas&quot;</string>
+    <string name="ui_033" formatted="false">&quot;Buka Setelan TV &gt; Aplikasi &gt; Google TV Home, lalu pilih Aktifkan. Pengaktifan perlu dilakukan di halaman sistem; shortcut tidak mengubah status aplikasi sendiri.&quot;</string>
+    <string name="ui_034" formatted="false">&quot;Bunyi&quot;</string>
+    <string name="ui_035" formatted="false">&quot;Cache tidak tersedia; memakai wallpaper bawaan.&quot;</string>
+    <string name="ui_036" formatted="false">&quot;Bawaan&quot;</string>
+    <string name="ui_037" formatted="false">&quot;Endpoint dan dokumentasi API Alpha Coders belum terverifikasi.&quot;</string>
+    <string name="ui_038" formatted="false">&quot;Format API key tidak valid.&quot;</string>
+    <string name="ui_039" formatted="false">&quot;Gagal menyimpan. &quot;</string>
+    <string name="ui_040" formatted="false">&quot;Gambar online belum tersedia; memakai cache/cadangan.&quot;</string>
+    <string name="ui_041" formatted="false">&quot;Google TV belum bisa dibuka&quot;</string>
+    <string name="ui_042" formatted="false">&quot;Gunakan pengaturan Wi-Fi TV untuk menghubungkan.&quot;</string>
+    <string name="ui_043" formatted="false">&quot;Hapus&quot;</string>
+    <string name="ui_044" formatted="false">&quot;Hari dan Tanggal&quot;</string>
+    <string name="ui_045" formatted="false">&quot;Hasil koneksi belum tersedia. Periksa Pengaturan Wi-Fi.&quot;</string>
+    <string name="ui_046" formatted="false">&quot;Hasil pemindaian terakhir. Pilih jaringan.&quot;</string>
+    <string name="ui_047" formatted="false">&quot;Hubungkan&quot;</string>
+    <string name="ui_048" formatted="false">&quot;Hubungkan jaringan ini melalui pengaturan Wi-Fi TV.&quot;</string>
+    <string name="ui_049" formatted="false">&quot;ISYA&quot;</string>
+    <string name="ui_050" formatted="false">&quot;Ilustrasi &quot;</string>
+    <string name="ui_051" formatted="false">&quot;Input&quot;</string>
+    <string name="ui_052" formatted="false">&quot;Input&quot;</string>
+    <string name="ui_053" formatted="false">&quot;Integrasi wallpaper belum diaktifkan karena pembatasan penggunaan API sumber ini.&quot;</string>
+    <string name="ui_054" formatted="false">&quot;Isi &quot;</string>
+    <string name="ui_055" formatted="false">&quot;Isi API Key untuk sumber yang dipilih terlebih dahulu.&quot;</string>
+    <string name="ui_056" formatted="false">&quot;Isi API key atau token&quot;</string>
+    <string name="ui_057" formatted="false">&quot;Isi kota/kabupaten&quot;</string>
+    <string name="ui_058" formatted="false">&quot;Isi provinsi&quot;</string>
+    <string name="ui_059" formatted="false">&quot;Izin Aksesbilitas&quot;</string>
+    <string name="ui_060" formatted="false">&quot;Izin lokasi ditolak. Gunakan Pengaturan Wi-Fi.&quot;</string>
+    <string name="ui_061" formatted="false">&quot;Izin pemindaian belum tersedia.&quot;</string>
+    <string name="ui_062" formatted="false">&quot;Izinkan lokasi untuk melihat jaringan Wi-Fi.&quot;</string>
+    <string name="ui_063" formatted="false">&quot;JADWAL SALAT · &quot;</string>
+    <string name="ui_064" formatted="false">&quot;JADWAL SALAT · Atur kota melalui Pengaturan&quot;</string>
+    <string name="ui_065" formatted="false">&quot;Jadikan paling depan&quot;</string>
+    <string name="ui_066" formatted="false">&quot;Jadwal Salat&quot;</string>
+    <string name="ui_067" formatted="false">&quot;Jam&quot;</string>
+    <string name="ui_068" formatted="false">&quot;Jaringan&quot;</string>
+    <string name="ui_069" formatted="false">&quot;Jaringan Wi-Fi&quot;</string>
+    <string name="ui_070" formatted="false">&quot;Jaringan disimpan. TV sedang mencoba terhubung.&quot;</string>
+    <string name="ui_071" formatted="false">&quot;Jaringan gagal disimpan. Periksa konfigurasi Wi-Fi.&quot;</string>
+    <string name="ui_072" formatted="false">&quot;Jaringan sudah tersimpan. Pilih jaringan pada pengaturan Wi-Fi.&quot;</string>
+    <string name="ui_073" formatted="false">&quot;Kata sandi Wi-Fi&quot;</string>
+    <string name="ui_074" formatted="false">&quot;Konfigurasi jaringan tidak didukung.&quot;</string>
+    <string name="ui_075" formatted="false">&quot;Kota/kabupaten&quot;</string>
+    <string name="ui_076" formatted="false">&quot;Kredit gambar&quot;</string>
+    <string name="ui_077" formatted="false">&quot;TV Langsung&quot;</string>
+    <string name="ui_078" formatted="false">&quot;Lokasi Jadwal Salat&quot;</string>
+    <string name="ui_079" formatted="false">&quot;Lokasi jadwal salat&quot;</string>
+    <string name="ui_080" formatted="false">&quot;MAGRIB&quot;</string>
+    <string name="ui_081" formatted="false">&quot;Masukkan token/key TMDB untuk mulai.&quot;</string>
+    <string name="ui_082" formatted="false">&quot;Matikan Override&quot;</string>
+    <string name="ui_083" formatted="false">&quot;Memakai wallpaper tontonan tersimpan (offline).&quot;</string>
+    <string name="ui_084" formatted="false">&quot;Memeriksa koneksi&quot;</string>
+    <string name="ui_085" formatted="false">&quot;Memindai jaringan Wi-Fi...&quot;</string>
+    <string name="ui_086" formatted="false">&quot;Menampilkan hasil pemindaian terakhir.&quot;</string>
+    <string name="ui_087" formatted="false">&quot;Menu daya tidak tersedia pada firmware TV ini. Gunakan tombol daya remote.&quot;</string>
+    <string name="ui_088" formatted="false">&quot;Menu tidak tersedia di firmware ini. Gunakan Setelan Utama.&quot;</string>
+    <string name="ui_089" formatted="false">&quot;Nama setelah sapaan waktu&quot;</string>
+    <string name="ui_090" formatted="false">&quot;Nilai sebelumnya dikembalikan.&quot;</string>
+    <string name="ui_091" formatted="false">&quot;Alihkan Beranda&quot;</string>
+    <string name="ui_092" formatted="false">&quot;Pemandangan&quot;</string>
+    <string name="ui_093" formatted="false">&quot;Pengaturan Wi-Fi&quot;</string>
+    <string name="ui_094" formatted="false">&quot;Pengaturan Wi-Fi tidak dapat dibuka.&quot;</string>
+    <string name="ui_095" formatted="false">&quot;Periksa kata sandi Wi-Fi.&quot;</string>
+    <string name="ui_096" formatted="false">&quot;Periksa kembali nilai waktu di sistem.&quot;</string>
+    <string name="ui_097" formatted="false">&quot;Pilih &quot;</string>
+    <string name="ui_098" formatted="false">&quot;Pilih jaringan untuk dihubungkan.&quot;</string>
+    <string name="ui_099" formatted="false">&quot;Pilih posisi&quot;</string>
+    <string name="ui_100" formatted="false">&quot;Pindahkan ke posisi...&quot;</string>
+    <string name="ui_101" formatted="false">&quot;Pindai Ulang&quot;</string>
+    <string name="ui_102" formatted="false">&quot;Posisi &quot;</string>
+    <string name="ui_103" formatted="false">&quot;Provinsi&quot;</string>
+    <string name="ui_104" formatted="false">&quot;Setelan Cepat&quot;</string>
+    <string name="ui_105" formatted="false">&quot;Refresh status&quot;</string>
+    <string name="ui_106" formatted="false">&quot;SELAMAT MALAM&quot;</string>
+    <string name="ui_107" formatted="false">&quot;SELAMAT PAGI&quot;</string>
+    <string name="ui_108" formatted="false">&quot;SELAMAT SIANG&quot;</string>
+    <string name="ui_109" formatted="false">&quot;SELAMAT SORE&quot;</string>
+    <string name="ui_110" formatted="false">&quot;SUBUH&quot;</string>
+    <string name="ui_111" formatted="false">&quot;Sapaan&quot;</string>
+    <string name="ui_112" formatted="false">&quot;Screensaver&quot;</string>
+    <string name="ui_113" formatted="false">&quot;Screensaver dan Tidur&quot;</string>
+    <string name="ui_114" formatted="false">&quot;Screensaver tidak tersimpan&quot;</string>
+    <string name="ui_115" formatted="false">&quot;Semua setelan&quot;</string>
+    <string name="ui_116" formatted="false">&quot;Setelan TV&quot;</string>
+    <string name="ui_117" formatted="false">&quot;Setelan Utama&quot;</string>
+    <string name="ui_118" formatted="false">&quot;Pengaturan&quot;</string>
+    <string name="ui_119" formatted="false">&quot;Menu Daya&quot;</string>
+    <string name="ui_120" formatted="false">&quot;Simpan&quot;</string>
+    <string name="ui_121" formatted="false">&quot;Tidur&quot;</string>
+    <string name="ui_122" formatted="false">&quot;Sleep tidak tersimpan&quot;</string>
+    <string name="ui_123" formatted="false">&quot;Status : Menunggu Izin&quot;</string>
+    <string name="ui_124" formatted="false">&quot;Status : Override Aktif&quot;</string>
+    <string name="ui_125" formatted="false">&quot;Status : Override Mati&quot;</string>
+    <string name="ui_126" formatted="false">&quot;Status tidak tersedia&quot;</string>
+    <string name="ui_127" formatted="false">&quot;Sudah terhubung ke &quot;</string>
+    <string name="ui_128" formatted="false">&quot;Sumber: AlAdhan, metode Kemenag (perhitungan). Waktu dapat berbeda dari jadwal masjid setempat. Kota/provinsi dikirim ke AlAdhan untuk mengambil jadwal.&quot;</string>
+    <string name="ui_129" formatted="false">&quot;TMDB belum tersedia; memakai cache/cadangan.&quot;</string>
+    <string name="ui_130" formatted="false">&quot;Tampilan&quot;</string>
+    <string name="ui_131" formatted="false">&quot;Produk ini menggunakan API TMDB tetapi tidak didukung atau disertifikasi oleh TMDB.\n\nAnime: MyAnimeList melalui Jikan, dengan cadangan TMDB.&quot;</string>
+    <string name="ui_132" formatted="false">&quot;Tidak tersedia&quot;</string>
+    <string name="ui_133" formatted="false">&quot;Token/key ditolak TMDB. Periksa pengaturan; memakai cache/cadangan.&quot;</string>
+    <string name="ui_134" formatted="false">&quot;Tontonan trending mingguan aktif · Daftar diperbarui setiap hari.&quot;</string>
+    <string name="ui_135" formatted="false">&quot;Tutup&quot;</string>
+    <string name="ui_136" formatted="false">&quot;Ubah Sapaan&quot;</string>
+    <string name="ui_137" formatted="false">&quot;Urutan&quot;</string>
+    <string name="ui_138" formatted="false">&quot;Urutan aplikasi&quot;</string>
+    <string name="ui_139" formatted="false">&quot;Verifikasi gagal&quot;</string>
+    <string name="ui_140" formatted="false">&quot;Wallpaper&quot;</string>
+    <string name="ui_141" formatted="false">&quot;Wi-Fi mati. Aktifkan melalui Pengaturan Wi-Fi.&quot;</string>
+    <string name="ui_142" formatted="false">&quot;Wi-Fi tidak tersedia.&quot;</string>
+    <string name="ui_143" formatted="false">&quot;Widget&quot;</string>
+    <string name="ui_144" formatted="false">&quot;ZUHUR&quot;</string>
+</resources>

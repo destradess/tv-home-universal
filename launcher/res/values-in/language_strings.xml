@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_title">Bahasa</string>
+    <string name="language_system_settings">Pengaturan Bahasa Sistem</string>
+    <string name="language_permission_needed">Mengubah bahasa seluruh TV memerlukan izin ADB satu kali. Jalankan perintah izin dari chat, atau gunakan pengaturan bahasa sistem.</string>
+    <string name="language_change_failed">Perubahan bahasa sistem belum terkonfirmasi. Gunakan pengaturan bahasa sistem TV.</string>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="override_service_label">TV Home — Alihkan Beranda</string>
+    <string name="override_service_description">Mengalihkan tombol Home dan beranda Google TV ke TV Home saat override diaktifkan. Shortcut Google TV tetap boleh dibuka. Mengamati identitas aplikasi dan tombol Home, tanpa membaca isi layar atau mengirim data ke internet.</string>
+</resources>

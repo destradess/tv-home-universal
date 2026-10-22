@@ -1,0 +1,11 @@
+<resources>
+    <string name="wallpaper_categories">Categories</string>
+    <string name="category_movie">Trending Movies</string>
+    <string name="category_tv">Trending Series</string>
+    <string name="category_anime">Trending Anime</string>
+    <string name="category_keep_one">Keep at least one category enabled.</string>
+    <string name="category_tmdb_only">Categories apply to TMDB. Select TMDB in API Source.</string>
+    <string name="category_top_movie">Top Rated Movies</string>
+    <string name="category_top_tv">Top Rated Series</string>
+    <string name="category_top_anime">Top Rated Anime</string>
+</resources>

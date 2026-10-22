@@ -1,0 +1,12 @@
+<resources>
+<string name="system_home">System Home</string>
+<string name="input_settings">Input Settings</string>
+<string name="feature_unavailable">This feature is unavailable on this TV.</string>
+<string name="universal_about">About</string>
+<string name="import_sound_pack">Import Sound Pack (.zip)</string>
+<string name="import_success">Sound pack imported.</string>
+<string name="import_failed">Could not import this sound pack.</string>
+<string name="system_sound">System Default</string>
+<string name="sound_pack_busy">Importing sound pack…</string>
+<string name="native_screensaver">System Screensaver Settings</string>
+<string name="country">Country</string><string name="prayer_method">Calculation: Muslim World League. Verify times with your local mosque.</string></resources>

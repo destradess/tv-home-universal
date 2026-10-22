@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ui_001" formatted="false">&quot; (Connected)&quot;</string>
+    <string name="ui_002" formatted="false">&quot; (unavailable)&quot;</string>
+    <string name="ui_003" formatted="false">&quot; active&quot;</string>
+    <string name="ui_004" formatted="false">&quot; is unavailable; using cached or fallback images.&quot;</string>
+    <string name="ui_005" formatted="false">&quot; uses public access without an API key.&quot;</string>
+    <string name="ui_006" formatted="false">&quot; min&quot;</string>
+    <string name="ui_007" formatted="false">&quot; in the TV Wi-Fi settings.&quot;</string>
+    <string name="ui_008" formatted="false">&quot; first.&quot;</string>
+    <string name="ui_009" formatted="false">&quot; · Main Row&quot;</string>
+    <string name="ui_010" formatted="false">&quot; · All Apps&quot;</string>
+    <string name="ui_011" formatted="false">&quot; · Unavailable; check network/city&quot;</string>
+    <string name="ui_012" formatted="false">&quot; · Loading&quot;</string>
+    <string name="ui_013" formatted="false">&quot;, next prayer&quot;</string>
+    <string name="ui_014" formatted="false">&quot;API Key&quot;</string>
+    <string name="ui_015" formatted="false">&quot;API Source&quot;</string>
+    <string name="ui_016" formatted="false">&quot;API Source: &quot;</string>
+    <string name="ui_017" formatted="false">&quot;API Source: TMDB&quot;</string>
+    <string name="ui_018" formatted="false">&quot;OTHER APPS · HOLD OK TO ARRANGE&quot;</string>
+    <string name="ui_019" formatted="false">&quot;ASR&quot;</string>
+    <string name="ui_020" formatted="false">&quot;Enable Google TV&quot;</string>
+    <string name="ui_021" formatted="false">&quot;Enable Location in TV settings to scan for Wi-Fi.&quot;</string>
+    <string name="ui_022" formatted="false">&quot;Enable Override&quot;</string>
+    <string name="ui_023" formatted="false">&quot;Enable the TV Home accessibility service to open the TV power menu.&quot;</string>
+    <string name="ui_024" formatted="false">&quot;All Inputs...&quot;</string>
+    <string name="ui_025" formatted="false">&quot;Space&quot;</string>
+    <string name="ui_026" formatted="false">&quot;Cancel&quot;</string>
+    <string name="ui_027" formatted="false">&quot;No image from this source has been displayed yet.&quot;</string>
+    <string name="ui_028" formatted="false">&quot;No cached movie images; using built-in wallpaper.&quot;</string>
+    <string name="ui_029" formatted="false">&quot;No networks found. Try Scan Again.&quot;</string>
+    <string name="ui_030" formatted="false">&quot;Not saved: permission to change system timeouts has not been granted.&quot;</string>
+    <string name="ui_031" formatted="false">&quot;Not saved: Sleep must be later than Screensaver.&quot;</string>
+    <string name="ui_032" formatted="false">&quot;Open Accessibility&quot;</string>
+    <string name="ui_033" formatted="false">&quot;Open Main Settings &gt; Apps &gt; Google TV Home, then choose Enable. Enable it in system settings; this shortcut cannot enable the app itself.&quot;</string>
+    <string name="ui_034" formatted="false">&quot;Sound&quot;</string>
+    <string name="ui_035" formatted="false">&quot;Cache unavailable; using built-in wallpaper.&quot;</string>
+    <string name="ui_036" formatted="false">&quot;Default&quot;</string>
+    <string name="ui_037" formatted="false">&quot;The Alpha Coders API endpoint and documentation have not been verified.&quot;</string>
+    <string name="ui_038" formatted="false">&quot;Invalid API key format.&quot;</string>
+    <string name="ui_039" formatted="false">&quot;Could not save. &quot;</string>
+    <string name="ui_040" formatted="false">&quot;Online images are unavailable; using cached or fallback images.&quot;</string>
+    <string name="ui_041" formatted="false">&quot;Google TV cannot be opened yet&quot;</string>
+    <string name="ui_042" formatted="false">&quot;Use the TV Wi-Fi settings to connect.&quot;</string>
+    <string name="ui_043" formatted="false">&quot;Delete&quot;</string>
+    <string name="ui_044" formatted="false">&quot;Day and Date&quot;</string>
+    <string name="ui_045" formatted="false">&quot;Connection results are unavailable. Check Wi-Fi Settings.&quot;</string>
+    <string name="ui_046" formatted="false">&quot;Last scan results. Select a network.&quot;</string>
+    <string name="ui_047" formatted="false">&quot;Connect&quot;</string>
+    <string name="ui_048" formatted="false">&quot;Connect to this network in the TV Wi-Fi settings.&quot;</string>
+    <string name="ui_049" formatted="false">&quot;ISHA&quot;</string>
+    <string name="ui_050" formatted="false">&quot;Illustration &quot;</string>
+    <string name="ui_051" formatted="false">&quot;Input&quot;</string>
+    <string name="ui_052" formatted="false">&quot;Inputs&quot;</string>
+    <string name="ui_053" formatted="false">&quot;Wallpaper integration is unavailable due to this source\'s API usage restrictions.&quot;</string>
+    <string name="ui_054" formatted="false">&quot;Enter &quot;</string>
+    <string name="ui_055" formatted="false">&quot;Enter the API Key for the selected source first.&quot;</string>
+    <string name="ui_056" formatted="false">&quot;Enter an API key or token&quot;</string>
+    <string name="ui_057" formatted="false">&quot;Enter a city or regency&quot;</string>
+    <string name="ui_058" formatted="false">&quot;Enter a province&quot;</string>
+    <string name="ui_059" formatted="false">&quot;Accessibility Permission&quot;</string>
+    <string name="ui_060" formatted="false">&quot;Location access was denied. Use Wi-Fi Settings.&quot;</string>
+    <string name="ui_061" formatted="false">&quot;Scanning permission is unavailable.&quot;</string>
+    <string name="ui_062" formatted="false">&quot;Allow location access to see Wi-Fi networks.&quot;</string>
+    <string name="ui_063" formatted="false">&quot;PRAYER TIMES · &quot;</string>
+    <string name="ui_064" formatted="false">&quot;PRAYER TIMES · Set your city in Settings&quot;</string>
+    <string name="ui_065" formatted="false">&quot;Move to Front&quot;</string>
+    <string name="ui_066" formatted="false">&quot;Prayer Times&quot;</string>
+    <string name="ui_067" formatted="false">&quot;Clock&quot;</string>
+    <string name="ui_068" formatted="false">&quot;Network&quot;</string>
+    <string name="ui_069" formatted="false">&quot;Wi-Fi Networks&quot;</string>
+    <string name="ui_070" formatted="false">&quot;Network saved. The TV is trying to connect.&quot;</string>
+    <string name="ui_071" formatted="false">&quot;Could not save the network. Check the Wi-Fi configuration.&quot;</string>
+    <string name="ui_072" formatted="false">&quot;Network already saved. Select it in Wi-Fi Settings.&quot;</string>
+    <string name="ui_073" formatted="false">&quot;Wi-Fi password&quot;</string>
+    <string name="ui_074" formatted="false">&quot;This network configuration is unsupported.&quot;</string>
+    <string name="ui_075" formatted="false">&quot;City / Regency&quot;</string>
+    <string name="ui_076" formatted="false">&quot;Image Credits&quot;</string>
+    <string name="ui_077" formatted="false">&quot;Live TV&quot;</string>
+    <string name="ui_078" formatted="false">&quot;Prayer Location&quot;</string>
+    <string name="ui_079" formatted="false">&quot;Prayer Location&quot;</string>
+    <string name="ui_080" formatted="false">&quot;MAGHRIB&quot;</string>
+    <string name="ui_081" formatted="false">&quot;Enter a TMDB token or key to begin.&quot;</string>
+    <string name="ui_082" formatted="false">&quot;Disable Override&quot;</string>
+    <string name="ui_083" formatted="false">&quot;Using cached movie wallpaper (offline).&quot;</string>
+    <string name="ui_084" formatted="false">&quot;Checking connection&quot;</string>
+    <string name="ui_085" formatted="false">&quot;Scanning for Wi-Fi networks...&quot;</string>
+    <string name="ui_086" formatted="false">&quot;Showing the last scan results.&quot;</string>
+    <string name="ui_087" formatted="false">&quot;The power menu is unavailable on this TV firmware. Use the remote power button.&quot;</string>
+    <string name="ui_088" formatted="false">&quot;This menu is unavailable on this firmware. Use Main Settings.&quot;</string>
+    <string name="ui_089" formatted="false">&quot;Name after the time greeting&quot;</string>
+    <string name="ui_090" formatted="false">&quot;The previous values were restored.&quot;</string>
+    <string name="ui_091" formatted="false">&quot;Override Launcher&quot;</string>
+    <string name="ui_092" formatted="false">&quot;Landscape&quot;</string>
+    <string name="ui_093" formatted="false">&quot;Wi-Fi Settings&quot;</string>
+    <string name="ui_094" formatted="false">&quot;Wi-Fi Settings could not be opened.&quot;</string>
+    <string name="ui_095" formatted="false">&quot;Check the Wi-Fi password.&quot;</string>
+    <string name="ui_096" formatted="false">&quot;Check the timeouts in system settings.&quot;</string>
+    <string name="ui_097" formatted="false">&quot;Select &quot;</string>
+    <string name="ui_098" formatted="false">&quot;Select a network to connect.&quot;</string>
+    <string name="ui_099" formatted="false">&quot;Choose Position&quot;</string>
+    <string name="ui_100" formatted="false">&quot;Move to Position...&quot;</string>
+    <string name="ui_101" formatted="false">&quot;Scan Again&quot;</string>
+    <string name="ui_102" formatted="false">&quot;Position &quot;</string>
+    <string name="ui_103" formatted="false">&quot;Province&quot;</string>
+    <string name="ui_104" formatted="false">&quot;Quick Settings&quot;</string>
+    <string name="ui_105" formatted="false">&quot;Refresh Status&quot;</string>
+    <string name="ui_106" formatted="false">&quot;GOOD EVENING&quot;</string>
+    <string name="ui_107" formatted="false">&quot;GOOD MORNING&quot;</string>
+    <string name="ui_108" formatted="false">&quot;GOOD AFTERNOON&quot;</string>
+    <string name="ui_109" formatted="false">&quot;GOOD AFTERNOON&quot;</string>
+    <string name="ui_110" formatted="false">&quot;FAJR&quot;</string>
+    <string name="ui_111" formatted="false">&quot;Greeting&quot;</string>
+    <string name="ui_112" formatted="false">&quot;Screensaver&quot;</string>
+    <string name="ui_113" formatted="false">&quot;Screensaver and Sleep&quot;</string>
+    <string name="ui_114" formatted="false">&quot;Screensaver timeout was not saved&quot;</string>
+    <string name="ui_115" formatted="false">&quot;All Settings&quot;</string>
+    <string name="ui_116" formatted="false">&quot;Main Settings&quot;</string>
+    <string name="ui_117" formatted="false">&quot;Main Settings&quot;</string>
+    <string name="ui_118" formatted="false">&quot;Settings&quot;</string>
+    <string name="ui_119" formatted="false">&quot;Power Menu&quot;</string>
+    <string name="ui_120" formatted="false">&quot;Save&quot;</string>
+    <string name="ui_121" formatted="false">&quot;Sleep&quot;</string>
+    <string name="ui_122" formatted="false">&quot;Sleep timeout was not saved&quot;</string>
+    <string name="ui_123" formatted="false">&quot;Status : Awaiting Permission&quot;</string>
+    <string name="ui_124" formatted="false">&quot;Status : Override On&quot;</string>
+    <string name="ui_125" formatted="false">&quot;Status : Override Off&quot;</string>
+    <string name="ui_126" formatted="false">&quot;Status unavailable&quot;</string>
+    <string name="ui_127" formatted="false">&quot;Already connected to &quot;</string>
+    <string name="ui_128" formatted="false">&quot;Source: AlAdhan, Kemenag calculation method. Times may differ from your local mosque. The city and province are sent to AlAdhan to retrieve prayer times.&quot;</string>
+    <string name="ui_129" formatted="false">&quot;TMDB is unavailable; using cached or fallback images.&quot;</string>
+    <string name="ui_130" formatted="false">&quot;Display&quot;</string>
+    <string name="ui_131" formatted="false">&quot;This product uses the TMDB API but is not endorsed or certified by TMDB.\n\nAnime: MyAnimeList via Jikan, with TMDB fallback.&quot;</string>
+    <string name="ui_132" formatted="false">&quot;Unavailable&quot;</string>
+    <string name="ui_133" formatted="false">&quot;TMDB rejected the token or key. Check settings; using cached or fallback images.&quot;</string>
+    <string name="ui_134" formatted="false">&quot;Weekly trending titles active · List updated daily.&quot;</string>
+    <string name="ui_135" formatted="false">&quot;Close&quot;</string>
+    <string name="ui_136" formatted="false">&quot;Edit Greeting&quot;</string>
+    <string name="ui_137" formatted="false">&quot;App Order&quot;</string>
+    <string name="ui_138" formatted="false">&quot;App Order&quot;</string>
+    <string name="ui_139" formatted="false">&quot;Verification failed&quot;</string>
+    <string name="ui_140" formatted="false">&quot;Wallpaper&quot;</string>
+    <string name="ui_141" formatted="false">&quot;Wi-Fi is off. Enable it in Wi-Fi Settings.&quot;</string>
+    <string name="ui_142" formatted="false">&quot;Wi-Fi is unavailable.&quot;</string>
+    <string name="ui_143" formatted="false">&quot;Widgets&quot;</string>
+    <string name="ui_144" formatted="false">&quot;DHUHR&quot;</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_title">Language</string>
+    <string name="language_system_settings">System Language Settings</string>
+    <string name="language_permission_needed">Changing the whole TV language requires a one-time ADB permission. Run the permission command from the chat, or use system language settings.</string>
+    <string name="language_change_failed">The system language change could not be verified. Please use the TV system language settings.</string>
+</resources>

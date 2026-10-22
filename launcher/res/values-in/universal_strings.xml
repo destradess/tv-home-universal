@@ -1,0 +1,12 @@
+<resources>
+<string name="system_home">Beranda Sistem</string>
+<string name="input_settings">Pengaturan Input</string>
+<string name="feature_unavailable">Fitur ini tidak tersedia di TV ini.</string>
+<string name="universal_about">Tentang</string>
+<string name="import_sound_pack">Impor Paket Suara (.zip)</string>
+<string name="import_success">Paket suara berhasil diimpor.</string>
+<string name="import_failed">Paket suara tidak dapat diimpor.</string>
+<string name="system_sound">Bawaan Sistem</string>
+<string name="sound_pack_busy">Mengimpor paket suara…</string>
+<string name="native_screensaver">Pengaturan Screensaver Sistem</string>
+<string name="country">Negara</string><string name="prayer_method">Perhitungan: Muslim World League. Sesuaikan dengan jadwal masjid setempat.</string></resources>

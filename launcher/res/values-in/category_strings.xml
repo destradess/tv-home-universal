@@ -1,0 +1,11 @@
+<resources>
+    <string name="wallpaper_categories">Kategori</string>
+    <string name="category_movie">Film Trending</string>
+    <string name="category_tv">Series Trending</string>
+    <string name="category_anime">Anime Trending</string>
+    <string name="category_keep_one">Aktifkan setidaknya satu kategori.</string>
+    <string name="category_tmdb_only">Kategori berlaku untuk TMDB. Pilih TMDB di API Source.</string>
+    <string name="category_top_movie">Film Top Rated</string>
+    <string name="category_top_tv">Series Top Rated</string>
+    <string name="category_top_anime">Anime Top Rated</string>
+</resources>

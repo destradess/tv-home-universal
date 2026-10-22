@@ -1,0 +1,7 @@
+<resources>
+    <string-array name="dock_apps"><item>com.android.vending</item><item>com.google.android.youtube.tv</item><item>com.netflix.ninja</item></string-array>
+    <string-array name="hidden_apps" />
+    <string name="live_tv_package" translatable="false"></string>
+    <string name="input_picker_package" translatable="false"></string>
+    <integer name="columns">5</integer>
+</resources>
