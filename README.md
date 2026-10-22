@@ -22,6 +22,14 @@ A minimal launcher for Android TV and Google TV, featuring a liquid glass interf
 - **Selectable sound packs** — Choose PS5, PS2 System, Switch, Xbox Series, Persona 5, Pip-Boy or Portal 2. Enable or disable effects and adjust the volume.
 - **System language support** — English and Indonesian resources follow the TV language; other locales currently fall back to English.
 
+## Screenshots
+
+### Home
+![TV Home Universal home screen](docs/screenshots/home.png)
+
+### Quick Settings
+![TV Home Universal quick settings](docs/screenshots/quick-settings.png)
+
 ## Install
 
 1. Obtain the preview APK from the project's release assets when available.
@@ -116,12 +124,6 @@ Based on [TV Home by Mihir Gupta](https://github.com/mihirgupta0900/tv-home), wi
 
 This product uses the TMDB API but is not endorsed or certified by TMDB. Online imagery belongs to its respective rights holders.
 
-## Screenshots
 
-### Home
-![TV Home Universal home screen](docs/screenshots/home.png)
-
-### Quick Settings
-![TV Home Universal quick settings](docs/screenshots/quick-settings.png)
 
 See [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
