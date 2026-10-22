@@ -1,0 +1,577 @@
+{
+  "samples": [
+    {
+      "pack": "ps5",
+      "event": "navigation",
+      "source": "https://raw.githubusercontent.com/theamanproject/DeckyAudioUploads/80d871cd2c124776b9ad20a4f666f8fe8043c818/PS5_Sounds/deck_ui_navigation.wav",
+      "existing": true
+    },
+    {
+      "pack": "ps5",
+      "event": "confirm",
+      "source": "https://raw.githubusercontent.com/theamanproject/DeckyAudioUploads/80d871cd2c124776b9ad20a4f666f8fe8043c818/PS5_Sounds/deck_ui_default_activation.wav",
+      "existing": true
+    },
+    {
+      "pack": "ps5",
+      "event": "back",
+      "source": "https://raw.githubusercontent.com/theamanproject/DeckyAudioUploads/80d871cd2c124776b9ad20a4f666f8fe8043c818/PS5_Sounds/deck_ui_out_of_game_detail.wav",
+      "existing": true
+    },
+    {
+      "pack": "ps5",
+      "event": "launch",
+      "source": "https://raw.githubusercontent.com/theamanproject/DeckyAudioUploads/80d871cd2c124776b9ad20a4f666f8fe8043c818/PS5_Sounds/deck_ui_launch_game.wav",
+      "duration": 1.3032879818594105
+    },
+    {
+      "pack": "ps5",
+      "event": "open",
+      "source": "https://raw.githubusercontent.com/theamanproject/DeckyAudioUploads/80d871cd2c124776b9ad20a4f666f8fe8043c818/PS5_Sounds/deck_ui_show_modal.wav",
+      "duration": 0.9284126984126985
+    },
+    {
+      "pack": "ps5",
+      "event": "close",
+      "source": "https://raw.githubusercontent.com/theamanproject/DeckyAudioUploads/80d871cd2c124776b9ad20a4f666f8fe8043c818/PS5_Sounds/deck_ui_hide_modal.wav",
+      "duration": 1.6702721088435375
+    },
+    {
+      "pack": "ps5",
+      "event": "side_open",
+      "source": "https://raw.githubusercontent.com/theamanproject/DeckyAudioUploads/80d871cd2c124776b9ad20a4f666f8fe8043c818/PS5_Sounds/deck_ui_side_menu_fly_in.wav",
+      "duration": 1.3463718820861679
+    },
+    {
+      "pack": "ps5",
+      "event": "side_close",
+      "source": "https://raw.githubusercontent.com/theamanproject/DeckyAudioUploads/80d871cd2c124776b9ad20a4f666f8fe8043c818/PS5_Sounds/deck_ui_side_menu_fly_out.wav",
+      "duration": 1.8688208616780044
+    },
+    {
+      "pack": "ps5",
+      "event": "on",
+      "source": "https://raw.githubusercontent.com/theamanproject/DeckyAudioUploads/80d871cd2c124776b9ad20a4f666f8fe8043c818/PS5_Sounds/deck_ui_switch_toggle_on.wav",
+      "duration": 0.46391666666666664
+    },
+    {
+      "pack": "ps5",
+      "event": "off",
+      "source": "https://raw.githubusercontent.com/theamanproject/DeckyAudioUploads/80d871cd2c124776b9ad20a4f666f8fe8043c818/PS5_Sounds/deck_ui_switch_toggle_off.wav",
+      "duration": 0.46391666666666664
+    },
+    {
+      "pack": "ps5",
+      "event": "tab",
+      "source": "https://raw.githubusercontent.com/theamanproject/DeckyAudioUploads/80d871cd2c124776b9ad20a4f666f8fe8043c818/PS5_Sounds/deck_ui_tab_transition_01.wav",
+      "duration": 0.40260770975056687
+    },
+    {
+      "pack": "ps5",
+      "event": "volume",
+      "source": "https://raw.githubusercontent.com/theamanproject/DeckyAudioUploads/80d871cd2c124776b9ad20a4f666f8fe8043c818/PS5_Sounds/deck_ui_slider_up.wav",
+      "duration": 0.2637291666666667
+    },
+    {
+      "pack": "ps5",
+      "event": "bump",
+      "source": "https://raw.githubusercontent.com/theamanproject/DeckyAudioUploads/80d871cd2c124776b9ad20a4f666f8fe8043c818/PS5_Sounds/deck_ui_bumper_end_02.wav",
+      "duration": 1.238375
+    },
+    {
+      "pack": "ps2",
+      "event": "navigation",
+      "source": "https://raw.githubusercontent.com/Junomede/PS2-System-Sounds/main/PS2-System-Sounds/deck_ui_navigation.wav",
+      "existing": true
+    },
+    {
+      "pack": "ps2",
+      "event": "confirm",
+      "source": "https://raw.githubusercontent.com/Junomede/PS2-System-Sounds/main/PS2-System-Sounds/deck_ui_default_activation.wav",
+      "existing": true
+    },
+    {
+      "pack": "ps2",
+      "event": "back",
+      "source": "https://raw.githubusercontent.com/Junomede/PS2-System-Sounds/main/PS2-System-Sounds/deck_ui_out_of_game_detail.wav",
+      "existing": true
+    },
+    {
+      "pack": "ps2",
+      "event": "launch",
+      "source": "https://raw.githubusercontent.com/Junomede/PS2-System-Sounds/main/PS2-System-Sounds/deck_ui_launch_game.wav",
+      "duration": 1.399047619047619
+    },
+    {
+      "pack": "ps2",
+      "event": "open",
+      "source": "https://raw.githubusercontent.com/Junomede/PS2-System-Sounds/main/PS2-System-Sounds/deck_ui_show_modal.wav",
+      "duration": 1.3894331065759638
+    },
+    {
+      "pack": "ps2",
+      "event": "close",
+      "source": "https://raw.githubusercontent.com/Junomede/PS2-System-Sounds/main/PS2-System-Sounds/deck_ui_hide_modal.wav",
+      "duration": 1.365374149659864
+    },
+    {
+      "pack": "ps2",
+      "event": "side_open",
+      "source": "https://raw.githubusercontent.com/Junomede/PS2-System-Sounds/main/PS2-System-Sounds/deck_ui_side_menu_fly_in.wav",
+      "duration": 0.913469387755102
+    },
+    {
+      "pack": "ps2",
+      "event": "side_close",
+      "source": "https://raw.githubusercontent.com/Junomede/PS2-System-Sounds/main/PS2-System-Sounds/deck_ui_side_menu_fly_out.wav",
+      "duration": 0.913469387755102
+    },
+    {
+      "pack": "ps2",
+      "event": "on",
+      "source": "https://raw.githubusercontent.com/Junomede/PS2-System-Sounds/main/PS2-System-Sounds/deck_ui_switch_toggle_on.wav",
+      "duration": 0.4759637188208617
+    },
+    {
+      "pack": "ps2",
+      "event": "off",
+      "source": "https://raw.githubusercontent.com/Junomede/PS2-System-Sounds/main/PS2-System-Sounds/deck_ui_switch_toggle_off.wav",
+      "duration": 0.4759637188208617
+    },
+    {
+      "pack": "ps2",
+      "event": "tab",
+      "source": "https://raw.githubusercontent.com/Junomede/PS2-System-Sounds/main/PS2-System-Sounds/deck_ui_tab_transition_01.wav",
+      "duration": 0.8557596371882086
+    },
+    {
+      "pack": "ps2",
+      "event": "volume",
+      "source": "https://raw.githubusercontent.com/Junomede/PS2-System-Sounds/main/PS2-System-Sounds/deck_ui_volume.wav",
+      "duration": 1.3942403628117914
+    },
+    {
+      "pack": "ps2",
+      "event": "bump",
+      "source": "https://raw.githubusercontent.com/Junomede/PS2-System-Sounds/main/PS2-System-Sounds/deck_ui_bumper_end_02.wav",
+      "duration": 0.3653741496598639
+    },
+    {
+      "pack": "switch",
+      "event": "navigation",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Switch/deck_ui_navigation.wav",
+      "existing": true
+    },
+    {
+      "pack": "switch",
+      "event": "confirm",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Switch/deck_ui_default_activation.wav",
+      "existing": true
+    },
+    {
+      "pack": "switch",
+      "event": "back",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Switch/deck_ui_out_of_game_detail.wav",
+      "existing": true
+    },
+    {
+      "pack": "switch",
+      "event": "launch",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Switch/deck_ui_launch_game.wav",
+      "duration": 0.6920833333333334
+    },
+    {
+      "pack": "switch",
+      "event": "open",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Switch/deck_ui_show_modal.wav",
+      "duration": 1.069875
+    },
+    {
+      "pack": "switch",
+      "event": "close",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Switch/deck_ui_hide_modal.wav",
+      "duration": 0.05775
+    },
+    {
+      "pack": "switch",
+      "event": "side_open",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Switch/deck_ui_side_menu_fly_in.wav",
+      "duration": 0.001
+    },
+    {
+      "pack": "switch",
+      "event": "side_close",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Switch/deck_ui_side_menu_fly_out.wav",
+      "duration": 0.05775
+    },
+    {
+      "pack": "switch",
+      "event": "on",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Switch/deck_ui_switch_toggle_on.wav",
+      "duration": 0.06341666666666666
+    },
+    {
+      "pack": "switch",
+      "event": "off",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Switch/deck_ui_switch_toggle_off.wav",
+      "duration": 0.065125
+    },
+    {
+      "pack": "switch",
+      "event": "tab",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Switch/deck_ui_tab_transition_01.wav",
+      "duration": 0.012041666666666668
+    },
+    {
+      "pack": "switch",
+      "event": "volume",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Switch/deck_ui_volume.wav",
+      "duration": 2.5441666666666665
+    },
+    {
+      "pack": "switch",
+      "event": "bump",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Switch/deck_ui_bumper_end_02.wav",
+      "duration": 0.10002083333333334
+    },
+    {
+      "pack": "xbox",
+      "event": "navigation",
+      "source": "https://raw.githubusercontent.com/FireXDragon007/XBOX-ONE-audioloader-pack/0871da8cf4e17fe83f77661ff2398c6f3a19a5d7/deck_ui_navigation.wav",
+      "existing": true
+    },
+    {
+      "pack": "xbox",
+      "event": "confirm",
+      "source": "https://raw.githubusercontent.com/FireXDragon007/XBOX-ONE-audioloader-pack/0871da8cf4e17fe83f77661ff2398c6f3a19a5d7/deck_ui_default_activation.wav",
+      "existing": true
+    },
+    {
+      "pack": "xbox",
+      "event": "back",
+      "source": "https://raw.githubusercontent.com/FireXDragon007/XBOX-ONE-audioloader-pack/0871da8cf4e17fe83f77661ff2398c6f3a19a5d7/deck_ui_out_of_game_detail.wav",
+      "existing": true
+    },
+    {
+      "pack": "xbox",
+      "event": "launch",
+      "source": "https://raw.githubusercontent.com/FireXDragon007/XBOX-ONE-audioloader-pack/0871da8cf4e17fe83f77661ff2398c6f3a19a5d7/deck_ui_launch_game.wav",
+      "duration": 0.715625
+    },
+    {
+      "pack": "xbox",
+      "event": "open",
+      "source": "https://raw.githubusercontent.com/FireXDragon007/XBOX-ONE-audioloader-pack/0871da8cf4e17fe83f77661ff2398c6f3a19a5d7/deck_ui_show_modal.wav",
+      "duration": 0.7106666666666667
+    },
+    {
+      "pack": "xbox",
+      "event": "close",
+      "source": "https://raw.githubusercontent.com/FireXDragon007/XBOX-ONE-audioloader-pack/0871da8cf4e17fe83f77661ff2398c6f3a19a5d7/deck_ui_hide_modal.wav",
+      "duration": 0.6858125
+    },
+    {
+      "pack": "xbox",
+      "event": "side_open",
+      "source": "https://raw.githubusercontent.com/FireXDragon007/XBOX-ONE-audioloader-pack/0871da8cf4e17fe83f77661ff2398c6f3a19a5d7/deck_ui_side_menu_fly_in.wav",
+      "duration": 0.3885625
+    },
+    {
+      "pack": "xbox",
+      "event": "side_close",
+      "source": "https://raw.githubusercontent.com/FireXDragon007/XBOX-ONE-audioloader-pack/0871da8cf4e17fe83f77661ff2398c6f3a19a5d7/deck_ui_side_menu_fly_out.wav",
+      "duration": 0.5267916666666667
+    },
+    {
+      "pack": "xbox",
+      "event": "on",
+      "source": "https://raw.githubusercontent.com/FireXDragon007/XBOX-ONE-audioloader-pack/0871da8cf4e17fe83f77661ff2398c6f3a19a5d7/deck_ui_default_activation.wav",
+      "duration": 1.1046041666666666
+    },
+    {
+      "pack": "xbox",
+      "event": "off",
+      "source": "https://raw.githubusercontent.com/FireXDragon007/XBOX-ONE-audioloader-pack/0871da8cf4e17fe83f77661ff2398c6f3a19a5d7/deck_ui_out_of_game_detail.wav",
+      "duration": 1.5594375
+    },
+    {
+      "pack": "xbox",
+      "event": "tab",
+      "source": "https://raw.githubusercontent.com/FireXDragon007/XBOX-ONE-audioloader-pack/0871da8cf4e17fe83f77661ff2398c6f3a19a5d7/deck_ui_tab_transition_01.wav",
+      "duration": 0.49816666666666665
+    },
+    {
+      "pack": "xbox",
+      "event": "volume",
+      "source": "https://raw.githubusercontent.com/FireXDragon007/XBOX-ONE-audioloader-pack/0871da8cf4e17fe83f77661ff2398c6f3a19a5d7/deck_ui_volume.wav",
+      "duration": 1.8705668934240363
+    },
+    {
+      "pack": "xbox",
+      "event": "bump",
+      "source": "https://raw.githubusercontent.com/FireXDragon007/XBOX-ONE-audioloader-pack/0871da8cf4e17fe83f77661ff2398c6f3a19a5d7/deck_ui_navigation.wav",
+      "duration": 0.21866666666666668
+    },
+    {
+      "pack": "persona",
+      "event": "navigation",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Persona%205/deck_ui_navigation.wav",
+      "existing": true
+    },
+    {
+      "pack": "persona",
+      "event": "confirm",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Persona%205/deck_ui_default_activation.wav",
+      "existing": true
+    },
+    {
+      "pack": "persona",
+      "event": "back",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Persona%205/deck_ui_out_of_game_detail.wav",
+      "existing": true
+    },
+    {
+      "pack": "persona",
+      "event": "launch",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Persona%205/deck_ui_launch_game.wav",
+      "duration": 4.76665625
+    },
+    {
+      "pack": "persona",
+      "event": "open",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Persona%205/deck_ui_show_modal.wav",
+      "duration": 0.40741496598639454
+    },
+    {
+      "pack": "persona",
+      "event": "close",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Persona%205/deck_ui_hide_modal.wav",
+      "duration": 0.38412698412698415
+    },
+    {
+      "pack": "persona",
+      "event": "side_open",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Persona%205/deck_ui_side_menu_fly_in.wav",
+      "duration": 0.105578231292517
+    },
+    {
+      "pack": "persona",
+      "event": "side_close",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Persona%205/deck_ui_side_menu_fly_out.wav",
+      "duration": 0.0982312925170068
+    },
+    {
+      "pack": "persona",
+      "event": "on",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Persona%205/deck_ui_switch_toggle_on.wav",
+      "duration": 0.13541950113378684
+    },
+    {
+      "pack": "persona",
+      "event": "off",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Persona%205/deck_ui_switch_toggle_off.wav",
+      "duration": 0.13541950113378684
+    },
+    {
+      "pack": "persona",
+      "event": "tab",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Persona%205/deck_ui_tab_transition_01.wav",
+      "duration": 0.29533333333333334
+    },
+    {
+      "pack": "persona",
+      "event": "volume",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Persona%205/deck_ui_volume.wav",
+      "duration": 0.253015873015873
+    },
+    {
+      "pack": "persona",
+      "event": "bump",
+      "source": "https://raw.githubusercontent.com/EMERALD0874/SteamUI-Sound-Packs/6fe84d5e69501da528c303034ce7c208f35f9030/Persona%205/deck_ui_bumper_end_02.wav",
+      "duration": 0.19922902494331066
+    },
+    {
+      "pack": "pipboy",
+      "event": "navigation",
+      "source": "https://raw.githubusercontent.com/Poptheweasel100/SteamDeckCustomSounds/8876e47c9255b3ece5ab4fdd85f0b0e98ba31bfa/Fallout%20-%20Pip-Boy%20Sounds/deck_ui_navigation.wav",
+      "existing": true
+    },
+    {
+      "pack": "pipboy",
+      "event": "confirm",
+      "source": "https://raw.githubusercontent.com/Poptheweasel100/SteamDeckCustomSounds/8876e47c9255b3ece5ab4fdd85f0b0e98ba31bfa/Fallout%20-%20Pip-Boy%20Sounds/deck_ui_default_activation.wav",
+      "existing": true
+    },
+    {
+      "pack": "pipboy",
+      "event": "back",
+      "source": "https://raw.githubusercontent.com/Poptheweasel100/SteamDeckCustomSounds/8876e47c9255b3ece5ab4fdd85f0b0e98ba31bfa/Fallout%20-%20Pip-Boy%20Sounds/deck_ui_out_of_game_detail.wav",
+      "existing": true
+    },
+    {
+      "pack": "pipboy",
+      "event": "launch",
+      "source": "https://raw.githubusercontent.com/Poptheweasel100/SteamDeckCustomSounds/8876e47c9255b3ece5ab4fdd85f0b0e98ba31bfa/Fallout%20-%20Pip-Boy%20Sounds/deck_ui_launch_game.wav",
+      "duration": 0.3831292517006803
+    },
+    {
+      "pack": "pipboy",
+      "event": "open",
+      "source": "https://raw.githubusercontent.com/Poptheweasel100/SteamDeckCustomSounds/8876e47c9255b3ece5ab4fdd85f0b0e98ba31bfa/Fallout%20-%20Pip-Boy%20Sounds/deck_ui_show_modal.wav",
+      "duration": 0.45134375
+    },
+    {
+      "pack": "pipboy",
+      "event": "close",
+      "source": "https://raw.githubusercontent.com/Poptheweasel100/SteamDeckCustomSounds/8876e47c9255b3ece5ab4fdd85f0b0e98ba31bfa/Fallout%20-%20Pip-Boy%20Sounds/deck_ui_hide_modal.wav",
+      "duration": 0.0746031746031746
+    },
+    {
+      "pack": "pipboy",
+      "event": "side_open",
+      "source": "https://raw.githubusercontent.com/Poptheweasel100/SteamDeckCustomSounds/8876e47c9255b3ece5ab4fdd85f0b0e98ba31bfa/Fallout%20-%20Pip-Boy%20Sounds/deck_ui_side_menu_fly_in.wav",
+      "duration": 0.45846875
+    },
+    {
+      "pack": "pipboy",
+      "event": "side_close",
+      "source": "https://raw.githubusercontent.com/Poptheweasel100/SteamDeckCustomSounds/8876e47c9255b3ece5ab4fdd85f0b0e98ba31bfa/Fallout%20-%20Pip-Boy%20Sounds/deck_ui_side_menu_fly_out.wav",
+      "duration": 0.44375
+    },
+    {
+      "pack": "pipboy",
+      "event": "on",
+      "source": "https://raw.githubusercontent.com/Poptheweasel100/SteamDeckCustomSounds/8876e47c9255b3ece5ab4fdd85f0b0e98ba31bfa/Fallout%20-%20Pip-Boy%20Sounds/deck_ui_switch_toggle_on.wav",
+      "duration": 1.21253125
+    },
+    {
+      "pack": "pipboy",
+      "event": "off",
+      "source": "https://raw.githubusercontent.com/Poptheweasel100/SteamDeckCustomSounds/8876e47c9255b3ece5ab4fdd85f0b0e98ba31bfa/Fallout%20-%20Pip-Boy%20Sounds/deck_ui_switch_toggle_off.wav",
+      "duration": 0.75025
+    },
+    {
+      "pack": "pipboy",
+      "event": "tab",
+      "source": "https://raw.githubusercontent.com/Poptheweasel100/SteamDeckCustomSounds/8876e47c9255b3ece5ab4fdd85f0b0e98ba31bfa/Fallout%20-%20Pip-Boy%20Sounds/deck_ui_tab_transition_01.wav",
+      "duration": 0.20678125
+    },
+    {
+      "pack": "pipboy",
+      "event": "volume",
+      "source": "https://raw.githubusercontent.com/Poptheweasel100/SteamDeckCustomSounds/8876e47c9255b3ece5ab4fdd85f0b0e98ba31bfa/Fallout%20-%20Pip-Boy%20Sounds/deck_ui_volume.wav",
+      "duration": 0.1208843537414966
+    },
+    {
+      "pack": "pipboy",
+      "event": "bump",
+      "source": "https://raw.githubusercontent.com/Poptheweasel100/SteamDeckCustomSounds/8876e47c9255b3ece5ab4fdd85f0b0e98ba31bfa/Fallout%20-%20Pip-Boy%20Sounds/deck_ui_bumper_end_02.wav",
+      "duration": 0.2015
+    },
+    {
+      "pack": "portal",
+      "event": "navigation",
+      "source": "https://raw.githubusercontent.com/Maisey197/Portal-2-Sounds/e6b75bac5ddaa88c4ef1f1d3de6e8f218c788621/Portal%202%20Sounds/deck_ui_navigation.wav",
+      "existing": true
+    },
+    {
+      "pack": "portal",
+      "event": "confirm",
+      "source": "https://raw.githubusercontent.com/Maisey197/Portal-2-Sounds/e6b75bac5ddaa88c4ef1f1d3de6e8f218c788621/Portal%202%20Sounds/deck_ui_default_activation.wav",
+      "existing": true
+    },
+    {
+      "pack": "portal",
+      "event": "back",
+      "source": "https://raw.githubusercontent.com/Maisey197/Portal-2-Sounds/e6b75bac5ddaa88c4ef1f1d3de6e8f218c788621/Portal%202%20Sounds/deck_ui_out_of_game_detail.wav",
+      "existing": true
+    },
+    {
+      "pack": "portal",
+      "event": "launch",
+      "source": "https://raw.githubusercontent.com/Maisey197/Portal-2-Sounds/e6b75bac5ddaa88c4ef1f1d3de6e8f218c788621/Portal%202%20Sounds/deck_ui_launch_game.wav",
+      "duration": 1.3840136054421768
+    },
+    {
+      "pack": "portal",
+      "event": "open",
+      "source": "https://raw.githubusercontent.com/Maisey197/Portal-2-Sounds/e6b75bac5ddaa88c4ef1f1d3de6e8f218c788621/Portal%202%20Sounds/deck_ui_show_modal.wav",
+      "duration": 0.4281859410430839
+    },
+    {
+      "pack": "portal",
+      "event": "close",
+      "source": "https://raw.githubusercontent.com/Maisey197/Portal-2-Sounds/e6b75bac5ddaa88c4ef1f1d3de6e8f218c788621/Portal%202%20Sounds/deck_ui_hide_modal.wav",
+      "duration": 1.2857142857142858
+    },
+    {
+      "pack": "portal",
+      "event": "side_open",
+      "source": "https://raw.githubusercontent.com/Maisey197/Portal-2-Sounds/e6b75bac5ddaa88c4ef1f1d3de6e8f218c788621/Portal%202%20Sounds/deck_ui_side_menu_fly_in.wav",
+      "duration": 0.6835374149659864
+    },
+    {
+      "pack": "portal",
+      "event": "side_close",
+      "source": "https://raw.githubusercontent.com/Maisey197/Portal-2-Sounds/e6b75bac5ddaa88c4ef1f1d3de6e8f218c788621/Portal%202%20Sounds/deck_ui_side_menu_fly_out.wav",
+      "duration": 1.5877097505668933
+    },
+    {
+      "pack": "portal",
+      "event": "on",
+      "source": "https://raw.githubusercontent.com/Maisey197/Portal-2-Sounds/e6b75bac5ddaa88c4ef1f1d3de6e8f218c788621/Portal%202%20Sounds/deck_ui_switch_toggle_on.wav",
+      "duration": 1.4717687074829933
+    },
+    {
+      "pack": "portal",
+      "event": "off",
+      "source": "https://raw.githubusercontent.com/Maisey197/Portal-2-Sounds/e6b75bac5ddaa88c4ef1f1d3de6e8f218c788621/Portal%202%20Sounds/deck_ui_switch_toggle_off.wav",
+      "duration": 1.2921541950113378
+    },
+    {
+      "pack": "portal",
+      "event": "tab",
+      "source": "https://raw.githubusercontent.com/Maisey197/Portal-2-Sounds/e6b75bac5ddaa88c4ef1f1d3de6e8f218c788621/Portal%202%20Sounds/deck_ui_tab_transition_01.wav",
+      "duration": 1.2857142857142858
+    },
+    {
+      "pack": "portal",
+      "event": "volume",
+      "source": "https://raw.githubusercontent.com/Maisey197/Portal-2-Sounds/e6b75bac5ddaa88c4ef1f1d3de6e8f218c788621/Portal%202%20Sounds/deck_ui_slider_up.wav",
+      "duration": 0.19
+    },
+    {
+      "pack": "portal",
+      "event": "bump",
+      "source": "https://raw.githubusercontent.com/Maisey197/Portal-2-Sounds/e6b75bac5ddaa88c4ef1f1d3de6e8f218c788621/Portal%202%20Sounds/deck_ui_bumper_end_02.wav",
+      "duration": 0.16412698412698412
+    }
+  ],
+  "same_pack_fallbacks": [
+    [
+      "ps5",
+      "volume",
+      "PS5_Sounds/deck_ui_slider_up.wav"
+    ],
+    [
+      "xbox",
+      "on",
+      "deck_ui_default_activation.wav"
+    ],
+    [
+      "xbox",
+      "off",
+      "deck_ui_out_of_game_detail.wav"
+    ],
+    [
+      "xbox",
+      "bump",
+      "deck_ui_navigation.wav"
+    ],
+    [
+      "portal",
+      "volume",
+      "Portal 2 Sounds/deck_ui_slider_up.wav"
+    ]
+  ]
+}

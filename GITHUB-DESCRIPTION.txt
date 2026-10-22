@@ -1,0 +1,1 @@
+A minimal Android TV & Google TV launcher with a liquid glass UI, customizable widgets, animated screensavers, and remote-friendly controls.
