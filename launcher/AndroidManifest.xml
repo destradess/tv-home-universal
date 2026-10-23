@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.github.tvhome.universal"
-    android:versionCode="2"
-    android:versionName="0.1.1">
+    android:versionCode="3"
+    android:versionName="0.2.0">
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
@@ -75,6 +76,8 @@
         <activity android:name=".LanguageSettingsActivity" android:exported="false" android:theme="@style/QuickPanel" />
         <activity android:name=".WifiNetworksActivity" android:exported="false" android:theme="@style/QuickPanel" />
         <activity android:name=".WallpaperCategoriesActivity" android:exported="false" android:theme="@style/QuickPanel" />
+        <receiver android:name=".WatchTimerReceiver" android:exported="false" />
+        <activity android:name=".WatchTimerSettingsActivity" android:exported="false" android:theme="@style/QuickPanel" />
         <activity android:name=".SoundSettingsActivity" android:exported="false" android:theme="@style/QuickPanel" />
         <activity android:name=".WallpaperSettingsActivity" android:exported="false" android:theme="@style/QuickPanel" />
         <activity
