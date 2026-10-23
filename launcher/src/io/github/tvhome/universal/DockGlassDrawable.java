@@ -42,6 +42,13 @@ final class DockGlassDrawable extends Drawable {
         sweep.cubicTo(area.right-area.width()*0.12f,area.top+area.height()*0.23f,
             area.left+area.width()*0.25f,area.top+area.height()*0.06f,area.left,area.top+area.height()*0.44f);sweep.close();
     }
+    /** Share the exact glass contour with the host's child clipping. */
+    @Override public void getOutline(android.graphics.Outline outline){
+        if(area.isEmpty()){outline.setEmpty();return;}
+        outline.setRoundRect((int)Math.ceil(area.left),(int)Math.ceil(area.top),
+                (int)Math.floor(area.right),(int)Math.floor(area.bottom),radius);
+        outline.setAlpha(1f);
+    }
     @Override public void draw(Canvas canvas){
         if(area.isEmpty())return;
         canvas.drawRoundRect(area,radius,radius,surface);

@@ -40,7 +40,7 @@ final class SettingsPopup {
     }
     private static PopupWindow create(Activity activity,String title,View body,View focus,Runnable onDismiss){
         GlassControls.apply(body);
-        if(UiText.get(R.string.navigation_sound).equals(title)||UiText.get(R.string.wallpaper_categories).equals(title)||UiText.get(R.string.language_title).equals(title)||compact(title)||UiText.get(R.string.ui_113).equals(title)||UiText.get(R.string.ui_069).equals(title))GlassControls.focusOnlyRows(body);
+        if(UiText.get(R.string.watch_title).equals(title)||UiText.get(R.string.navigation_sound).equals(title)||UiText.get(R.string.wallpaper_categories).equals(title)||UiText.get(R.string.language_title).equals(title)||compact(title)||UiText.get(R.string.ui_113).equals(title)||UiText.get(R.string.ui_069).equals(title))GlassControls.focusOnlyRows(body);
         sizeRows(activity,body);
         LinearLayout shell=NavigationSound.panel(activity);shell.setOrientation(LinearLayout.VERTICAL);shell.setPadding(dp(activity,8),dp(activity,8),dp(activity,8),dp(activity,8));
         shell.setBackground(GlassMenu.background(activity));
@@ -75,6 +75,6 @@ final class SettingsPopup {
         }
     }
     private static boolean compact(String title){return UiText.get(R.string.ui_091).equals(title)||UiText.get(R.string.ui_140).equals(title)||UiText.get(R.string.ui_143).equals(title);}
-    private static int width(String title){return UiText.get(R.string.navigation_sound).equals(title)?280:UiText.get(R.string.wallpaper_categories).equals(title)?244:UiText.get(R.string.language_title).equals(title)?280:UiText.get(R.string.ui_143).equals(title)||UiText.get(R.string.ui_069).equals(title)||UiText.get(R.string.ui_091).equals(title)?244:220;}
+    private static int width(String title){return UiText.get(R.string.watch_title).equals(title)?244:UiText.get(R.string.navigation_sound).equals(title)?280:UiText.get(R.string.wallpaper_categories).equals(title)?244:UiText.get(R.string.language_title).equals(title)?280:UiText.get(R.string.ui_143).equals(title)||UiText.get(R.string.ui_069).equals(title)||UiText.get(R.string.ui_091).equals(title)?244:220;}
     private static int dp(Activity activity,int n){return Math.round(n*activity.getResources().getDisplayMetrics().density);}
 }

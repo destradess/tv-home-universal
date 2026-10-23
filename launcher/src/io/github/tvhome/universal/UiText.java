@@ -1,7 +1,7 @@
 package io.github.tvhome.universal;
 public final class UiText extends android.app.Application {
     private static UiText app;
-    @Override public void onCreate(){super.onCreate();app=this;NavigationSound.init(this);WakeSoundController.init(this);
+    @Override public void onCreate(){super.onCreate();app=this;NavigationSound.init(this);WakeSoundController.init(this);WatchTimerController.init(this);
         registerActivityLifecycleCallbacks(new android.app.Application.ActivityLifecycleCallbacks(){
             public void onActivityResumed(android.app.Activity activity){WakeSoundController.foreground();NavigationSound.attach(activity.getWindow().getDecorView());NavigationSound.attachWindow(activity.getWindow());}
             public void onActivityCreated(android.app.Activity activity,android.os.Bundle state){}

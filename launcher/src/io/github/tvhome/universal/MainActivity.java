@@ -76,6 +76,7 @@ public class MainActivity extends Activity {
     private final Set<String> hidden = new HashSet<>();
     private String liveTvPkg, inputPickerPkg;
     private int cols;
+    private boolean horizontalMode;
 
     static final class App {
         String pkg, label;
@@ -93,6 +94,7 @@ public class MainActivity extends Activity {
 
     private HomeScrollView scroll;
     private LinearLayout content, dockRow;
+    private DockScrollView dockScroll;
     private FrameLayout hero;
     private LinearLayout grid;
     private ImageView wallBack, wallFront;
@@ -160,6 +162,7 @@ public class MainActivity extends Activity {
         liveTvPkg = getString(R.string.live_tv_package);
         inputPickerPkg = getString(R.string.input_picker_package);
         cols = getResources().getInteger(R.integer.columns);
+        horizontalMode = getPreferences(MODE_PRIVATE).getBoolean("horizontal_mode",false);
         getWindow().getDecorView().setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
@@ -201,6 +204,9 @@ public class MainActivity extends Activity {
             if (last == null && !dockCards.isEmpty()) last = dockCards.get(0);
             if (last != null && !last.hasFocus()) last.requestFocus();
         }
+        if(horizontalMode)dockScroll.post(()->{
+            View focused=getCurrentFocus();if(focused!=null)alignCarousel(focused,false);
+        });
         if (firstShow) { firstShow = false; playEntrance(); }
         // New photo on return if the current one has been up for the full interval.
         long revision = MovieWallpaperProvider.prefs(this).getLong("revision", 0);
@@ -212,6 +218,7 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onPause() {
+        if(dockScroll!=null)dockScroll.stopPan();
         if(movingPackage!=null)finishDirectMove(false,false);
         if (!appLaunchDispatched) cancelAppLaunchBounce();
         super.onPause();
@@ -313,12 +320,31 @@ public class MainActivity extends Activity {
 
         dockRow = new LinearLayout(this);
         dockRow.setOrientation(LinearLayout.HORIZONTAL);
-        dockRow.setGravity(Gravity.CENTER);
+        dockRow.setGravity(Gravity.LEFT | Gravity.CENTER_VERTICAL);
+        dockRow.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
         dockRow.setClipChildren(false);
         dockRow.setClipToPadding(false);
         dockRow.setPadding(dp(20), dp(22), dp(20), dp(22));
-        dockRow.setBackground(new DockGlassDrawable(getResources().getDisplayMetrics().density));
-        bottom.addView(dockRow, new LinearLayout.LayoutParams(-1, -2));
+        if(horizontalMode){
+        dockScroll = new DockScrollView(this);
+        dockScroll.setBackground(new DockGlassDrawable(getResources().getDisplayMetrics().density));
+        dockScroll.setHorizontalScrollBarEnabled(false);
+        dockScroll.setOverScrollMode(View.OVER_SCROLL_NEVER);
+        dockScroll.setClipChildren(true);
+        dockScroll.setOutlineProvider(ViewOutlineProvider.BACKGROUND);
+        dockScroll.setClipToOutline(true);
+        dockScroll.setFocusable(false);
+        dockScroll.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
+        dockScroll.addView(dockRow, new FrameLayout.LayoutParams(-2, -2));
+        bottom.addView(dockScroll, new LinearLayout.LayoutParams(-1, -2));
+        dockScroll.addOnLayoutChangeListener((v,l,t,r,b,ol,ot,or,ob) -> {
+            if(r-l!=or-ol)sizeCarousel();
+        });
+        }else{
+            dockRow.setGravity(Gravity.CENTER);
+            dockRow.setBackground(new DockGlassDrawable(getResources().getDisplayMetrics().density));
+            bottom.addView(dockRow,new LinearLayout.LayoutParams(-1,-2));
+        }
 
         appsLabel = text(11, "sans-serif-medium", 0x99FFFFFF);
         appsLabel.setText(UiText.get(R.string.ui_018));
@@ -394,7 +420,7 @@ public class MainActivity extends Activity {
         wifiPill.setOnClickListener(v -> showNetworkMenu());
         TextView settings = pill(UiText.get(R.string.ui_118), "settings");
         settings.setOnClickListener(v -> showCompactMenu(settings, UiText.get(R.string.ui_118),
-                new String[]{UiText.get(R.string.ui_117), UiText.get(R.string.ui_052), UiText.get(R.string.ui_091), UiText.get(R.string.ui_140), UiText.get(R.string.ui_143), UiText.get(R.string.ui_104), UiText.get(R.string.ui_113), UiText.get(R.string.ui_137), UiText.get(R.string.navigation_sound), UiText.get(R.string.ui_119)}, which -> {
+                new String[]{UiText.get(R.string.ui_117), UiText.get(R.string.ui_052), UiText.get(R.string.ui_091), UiText.get(R.string.ui_140), UiText.get(R.string.ui_143), UiText.get(R.string.ui_104), UiText.get(R.string.ui_113), UiText.get(R.string.ui_137), UiText.get(R.string.navigation_sound), UiText.get(R.string.layout_mode), UiText.get(R.string.watch_title), UiText.get(R.string.ui_119)}, which -> {
                     if (which == 0) launch(new Intent(Settings.ACTION_SETTINGS));
                     else if (which == 1) showInputs(settings);
                     else if (which == 2) startActivity(SettingsPopup.position(new Intent(this, OverrideSettingsActivity.class), settings));
@@ -404,6 +430,8 @@ public class MainActivity extends Activity {
                     else if (which == 6) startActivity(SettingsPopup.position(new Intent(this, ScreensaverSettingsActivity.class), settings));
                     else if (which == 7) showAppOrder();
                     else if (which == 8) startActivity(SettingsPopup.position(new Intent(this, SoundSettingsActivity.class), settings));
+                    else if (which == 9) showLayoutMode();
+                    else if (which == 10) startActivity(SettingsPopup.position(new Intent(this,WatchTimerSettingsActivity.class),settings));
                     else showShutdown();
                 }, "settings"));
         orderAnchor = settings;
@@ -527,7 +555,7 @@ public class MainActivity extends Activity {
         if(movePreview==null&&!saved.equals(mergedOrder))getPreferences(MODE_PRIVATE).edit().putString("app_order_v1",mergedOrder).apply();
         orderedApps.clear();
         for (String pkg : order) orderedApps.add(byPkg.get(pkg));
-        int dockSize = Math.min(cols, orderedApps.size());
+        int dockSize = horizontalMode?orderedApps.size():Math.min(cols,orderedApps.size());
         List<App> dock = new ArrayList<>(orderedApps.subList(0, dockSize));
         List<App> rest = new ArrayList<>(orderedApps.subList(dockSize, orderedApps.size()));
 
@@ -537,6 +565,7 @@ public class MainActivity extends Activity {
         state.add(movingPackage==null?"":movingPackage);
         state.add(UiText.locale().toLanguageTag());
         state.add(Integer.toString(cols));
+        state.add(Boolean.toString(horizontalMode));
         for (App app : orderedApps) {
             state.add(app.pkg);state.add(app.component.flattenToString());state.add(app.label);
             state.add(Boolean.toString(app.isBanner));state.add(Boolean.toString(app.googleTvShortcut));
@@ -552,8 +581,11 @@ public class MainActivity extends Activity {
 
         for (int i = 0; i < dock.size(); i++) {
             View tile = tile(dock.get(i), true);
-            LinearLayout.LayoutParams p = new LinearLayout.LayoutParams(0, -2, 1f);
-            p.setMargins(i == 0 ? 0 : dp(10), 0, i == dock.size() - 1 ? 0 : dp(10), 0);
+            LinearLayout.LayoutParams p = horizontalMode
+                    ?new LinearLayout.LayoutParams(carouselCardWidth(),-2)
+                    :new LinearLayout.LayoutParams(0,-2,1f);
+            if(horizontalMode)p.setMargins(0,0,i==dock.size()-1?0:dp(20),0);
+            else p.setMargins(i==0?0:dp(10),0,i==dock.size()-1?0:dp(10),0);
             dockRow.addView(tile, p);
         }
 
@@ -576,7 +608,9 @@ public class MainActivity extends Activity {
             p.setMargins(dp(10), 0, i == cols - 1 ? 0 : dp(10), 0);
             row.addView(new View(this), p);
         }
-        appsLabel.setVisibility(rest.isEmpty() ? View.GONE : View.VISIBLE);
+        appsLabel.setVisibility(rest.isEmpty()?View.GONE:View.VISIBLE);
+        grid.setVisibility(rest.isEmpty()?View.GONE:View.VISIBLE);
+        sizeCarousel();
         wireFocus();
 
         if (!dock.isEmpty()) { title.setText(dock.get(0).label); }
@@ -623,8 +657,11 @@ public class MainActivity extends Activity {
             final int index = i;
             String rowIcon = icon;
             if ("settings".equals(icon)) {
-                String[] settingsIcons = {"settings", "input", "home", "wallpaper", "widgets", "quick", "sleep", "order", "sound", "power"};
+                String[] settingsIcons = {"settings", "input", "home", "wallpaper", "widgets", "quick", "sleep", "order", "sound", "apps", "watch_timer", "power"};
                 if (i < settingsIcons.length) rowIcon = settingsIcons[i];
+            }
+            if ("apps".equals(icon)) {
+                rowIcon = i==0?"layout_classic":"layout_horizontal";
             }
             if ("network".equals(icon)) {
                 String[] networkIcons = {"wifi", "settings", "refresh"};
@@ -743,7 +780,7 @@ public class MainActivity extends Activity {
     private void shiftDirectMove(int dx,int dy){
         long now=SystemClock.uptimeMillis();if(now-lastMoveAt<130)return;lastMoveAt=now;
         int index=movePreview.indexOf(movingPackage);
-        int target=AppMovePolicy.target(index,movePreview.size(),cols,dx,dy);
+        int target=AppMovePolicy.target(index,movePreview.size(),horizontalMode?Math.max(1,movePreview.size()):cols,dx,dy);
         if(index==target){NavigationSound.event(this,NavigationSound.BUMP);return;}
         Map<String,android.graphics.Rect> before=new HashMap<>();
         List<View> oldCards=new ArrayList<>(dockCards);oldCards.addAll(gridCards);
@@ -842,11 +879,13 @@ public class MainActivity extends Activity {
             if (!has) return;
             lastFocusedId = v.getId();
             focusPackage = app.pkg;
+            if(horizontalMode&&inDock)for(View pill:pills)pill.setNextFocusDownId(v.getId());
             if (inDock) {
                 title.setText(app.pkg.equals(movingPackage)?"← "+app.label+" →":app.label);
                 title.animate().alpha(1f).setDuration(200).start();
                 updateBackdropShade(1f);
                 scroll.smoothScrollTo(0, 0);
+                if(horizontalMode)dockScroll.post(() -> { if(v.hasFocus())alignCarousel(v,true); });
             } else {
                 updateBackdropShade(0.35f);
                 title.animate().alpha(0f).setDuration(200).start();
@@ -858,6 +897,51 @@ public class MainActivity extends Activity {
         return box;
     }
 
+    private void showLayoutMode(){
+        String[] choices={
+            (!horizontalMode?"✓ ":"")+UiText.get(R.string.layout_classic),
+            (horizontalMode?"✓ ":"")+UiText.get(R.string.layout_horizontal)
+        };
+        showCompactMenu(orderAnchor,UiText.get(R.string.layout_mode),choices,which->{
+            boolean selected=which==1;
+            if(selected==horizontalMode)return;
+            finishDirectMove(false,false);
+            getPreferences(MODE_PRIVATE).edit().putBoolean("horizontal_mode",selected).apply();
+            recreate();
+        },"apps");
+    }
+
+    private int carouselCardWidth(){
+        int width=dockScroll.getWidth();
+        if(width<=0)width=getResources().getDisplayMetrics().widthPixels-dp(96);
+        return CarouselPolicy.cardWidth(width,dp(20),dp(20),5);
+    }
+    private void sizeCarousel(){
+        if(!horizontalMode||dockScroll==null||dockRow==null)return;
+        int width=carouselCardWidth(),gap=dp(20),viewport=dockScroll.getWidth();
+        for(int i=0;i<dockRow.getChildCount();i++){
+            View box=dockRow.getChildAt(i);LinearLayout.LayoutParams params=(LinearLayout.LayoutParams)box.getLayoutParams();
+            params.width=width;box.setLayoutParams(params);
+        }
+        // Extra tail keeps even the final app at the second focus slot.
+        int tail=dockCards.size()>2?Math.max(dp(20),viewport-dp(20)-2*width-gap):dp(20);
+        dockRow.setPadding(dp(20),dp(22),tail,dp(22));
+        dockScroll.post(() -> {View focused=getCurrentFocus();if(focused!=null)alignCarousel(focused,false);});
+    }
+    private void alignCarousel(View focused,boolean animate){
+        int index=dockCards.indexOf(focused);if(index<0)return;
+        int target=CarouselPolicy.offset(index,carouselCardWidth()+dp(20));
+        dockScroll.moveTo(target,animate);
+    }
+
+    private int headerAppTarget(){
+        if(horizontalMode){
+            for(View card:dockCards)if(((App)card.getTag()).pkg.equals(focusPackage))return card.getId();
+            return dockCards.get(0).getId();
+        }
+        return dockCards.get(Math.min(dockCards.size()-1,dockCards.size()/2)).getId();
+    }
+
     /** Explicit D-pad targets: one row per press, ends of rows and of the top bar don't wrap. */
     private void wireFocus() {
         int d = dockCards.size(), g = gridCards.size();
@@ -866,7 +950,7 @@ public class MainActivity extends Activity {
             p.setNextFocusLeftId(i == 0 ? p.getId() : pills.get(i - 1).getId());
             p.setNextFocusRightId(i == pills.size() - 1 ? p.getId() : pills.get(i + 1).getId());
             p.setNextFocusUpId(p.getId());
-            p.setNextFocusDownId(d > 0 ? dockCards.get(Math.min(d - 1, d / 2)).getId() : p.getId());
+            p.setNextFocusDownId(d > 0 ? headerAppTarget() : p.getId());
         }
         int topId = pills.get(0).getId();
         for (int i = 0; i < d; i++) {
@@ -1310,7 +1394,8 @@ public class MainActivity extends Activity {
         header.animate().alpha(1f).translationY(0).setDuration(500).setStartDelay(80).start();
         title.setAlpha(0f);
         title.animate().alpha(1f).setDuration(500).setStartDelay(200).start();
-        for (int i = 0; i < dockRow.getChildCount(); i++) {
+        int animatedCards=horizontalMode?Math.min(cols,dockRow.getChildCount()):dockRow.getChildCount();
+        for (int i = 0; i < animatedCards; i++) {
             View t = dockRow.getChildAt(i);
             t.setAlpha(0f);
             t.setTranslationY(dp(24));
@@ -1499,6 +1584,34 @@ public class MainActivity extends Activity {
             int width = MeasureSpec.getSize(w);
             super.onMeasure(w, MeasureSpec.makeMeasureSpec(width * 9 / 16, MeasureSpec.EXACTLY));
         }
+    }
+
+    final class DockScrollView extends android.widget.HorizontalScrollView {
+        private android.animation.ValueAnimator pan;
+        DockScrollView(Context context){super(context);}
+        void stopPan(){if(pan!=null){pan.cancel();pan=null;}}
+        void moveTo(int x,boolean animate){
+            stopPan();
+            if(!animate||getScrollX()==x){scrollTo(x,0);return;}
+            pan=android.animation.ValueAnimator.ofInt(getScrollX(),x);
+            pan.setDuration(240);pan.setInterpolator(new DecelerateInterpolator(1.5f));
+            pan.addUpdateListener(a->scrollTo((Integer)a.getAnimatedValue(),0));pan.start();
+        }
+        @Override protected void dispatchDraw(Canvas canvas){
+            // Keep animated card edges inside the glass, including focus-scale overhang.
+            int saved=canvas.save();int inset=dp(12);
+            canvas.clipRect(getScrollX()+inset,getScrollY(),
+                    getScrollX()+getWidth()-inset,getScrollY()+getHeight());
+            super.dispatchDraw(canvas);canvas.restoreToCount(saved);
+        }
+        @Override protected int computeScrollDeltaToGetChildRectOnScreen(android.graphics.Rect rect){return 0;}
+        @Override public boolean requestChildRectangleOnScreen(View child,android.graphics.Rect rect,boolean immediate){return false;}
+        @Override public boolean executeKeyEvent(KeyEvent event){
+            int key=event.getKeyCode();
+            if(key==KeyEvent.KEYCODE_DPAD_LEFT||key==KeyEvent.KEYCODE_DPAD_RIGHT||key==KeyEvent.KEYCODE_DPAD_UP||key==KeyEvent.KEYCODE_DPAD_DOWN)return false;
+            return super.executeKeyEvent(event);
+        }
+        @Override protected void onDetachedFromWindow(){stopPan();super.onDetachedFromWindow();}
     }
 
     /** ScrollView that never auto-scrolls to the focused child; the activity scrolls it by row. */

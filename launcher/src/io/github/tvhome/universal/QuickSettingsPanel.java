@@ -68,31 +68,26 @@ final class QuickSettingsPanel {
         MenuIcon.attach(all,"settings",18,Color.WHITE);
         all.setTextSize(11); all.setPadding(dp(10),dp(8),dp(10),dp(8));
         header.addView(all,new LinearLayout.LayoutParams(-2,dp(40))); panel.addView(header);
-        String[] names={UiText.get(R.string.ui_112),UiText.get(R.string.ui_051),UiText.get(R.string.ui_130),UiText.get(R.string.ui_034),"Wi-Fi","Bluetooth"};
-        String[] icons={"screensaver","input","display","sound","wifi","bluetooth"};
-        for(int row=0;row<3;row++) {
+        String[] names={UiText.get(R.string.ui_112),UiText.get(R.string.watch_title),UiText.get(R.string.ui_051),UiText.get(R.string.ui_130),UiText.get(R.string.ui_034),"Wi-Fi","Bluetooth",UiText.get(R.string.language_title)};
+        String[] icons={"screensaver","watch_timer","input","display","sound","wifi","bluetooth","language"};
+        int[] targets={0,-1,1,2,3,4,5,-2};
+        for(int row=0;row<4;row++) {
             LinearLayout line=new LinearLayout(context);
             for(int col=0;col<2;col++) {
                 final int index=row*2+col;
-                TextView tile=tile(names[index], () -> open(index));
+                TextView tile=tile(names[index], () -> {
+                    if(targets[index]==-1)launch(new Intent(context,WatchTimerSettingsActivity.class).putExtra("popup_quick_position",true));
+                    else if(targets[index]==-2)launch(new Intent(context,LanguageSettingsActivity.class));
+                    else open(targets[index]);
+                });
                 MenuIcon.attach(tile,icons[index],19,Color.WHITE);
+                if(targets[index]==-1){tile.setTextSize(12);tile.setMaxLines(2);}
                 LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(0,dp(58),1);
                 lp.setMargins(col==0?0:dp(5),row==0?dp(16):dp(8),col==0?dp(5):0,0);
                 line.addView(tile,lp); if(index==0) first=tile;
             }
             panel.addView(line,new LinearLayout.LayoutParams(-1,-2));
         }
-        LinearLayout languageRow=new LinearLayout(context);
-        TextView languages=tile(UiText.get(R.string.language_title),()->launch(new Intent(context,LanguageSettingsActivity.class)));
-        MenuIcon.attach(languages,"language",19,Color.WHITE);
-        LinearLayout.LayoutParams languageParams=new LinearLayout.LayoutParams(0,dp(58),1);
-        languageParams.setMargins(0,dp(8),dp(5),0);
-        languageRow.addView(languages,languageParams);
-        View spacer=new View(context);
-        LinearLayout.LayoutParams spacerParams=new LinearLayout.LayoutParams(0,dp(58),1);
-        spacerParams.setMargins(dp(5),dp(8),0,0);
-        languageRow.addView(spacer,spacerParams);
-        panel.addView(languageRow,new LinearLayout.LayoutParams(-1,-2));
         TextView footer=label(10); footer.setText("TV Home"); footer.setTextColor(0x99FFFFFF); footer.setPadding(0,dp(12),0,0); panel.addView(footer);
 
     }

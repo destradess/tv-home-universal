@@ -30,6 +30,8 @@ final class MenuIcon extends Drawable {
                 c.drawCircle(12,12,9,paint);path(c,8,12,16,12);break;
             case "status_waiting":
                 c.drawCircle(12,12,9,paint);path(c,12,6,12,12,16,14);break;
+            case "watch_timer":
+                c.drawCircle(12,14,8,paint);path(c,9,2,15,2);path(c,12,2,12,5);path(c,12,9,12,14,16,14);path(c,19,5,21,7);break;
             case "power":
                 c.drawArc(4,4,20,21,-45,270,false,paint);path(c,12,2,12,11);break;
             case "power_off":
@@ -72,6 +74,18 @@ final class MenuIcon extends Drawable {
                 path(c,3,11,12,3,21,11);path(c,5,10,5,21,10,21,10,15,14,15,14,21,19,21,19,10);break;
             case "wallpaper":
                 c.drawRoundRect(3,3,21,21,2,2,paint);c.drawCircle(8,8,1.6f,paint);path(c,4,17,9,12,13,16,17,10,21,15);break;
+            case "apps":
+                c.drawRoundRect(2,4,22,20,2,2,paint);
+                path(c,8,4,8,20);path(c,8,12,22,12);path(c,15,12,15,20);break;
+            case "layout_horizontal":
+                c.drawRoundRect(2,7,8,17,1.5f,1.5f,paint);
+                c.drawRoundRect(11,7,17,17,1.5f,1.5f,paint);
+                path(c,21,7,22,7,22,17,21,17);break;
+            case "layout_classic":
+                c.drawRoundRect(2,3,22,9,1.5f,1.5f,paint);
+                c.drawRoundRect(2,13,7,21,1,1,paint);
+                c.drawRoundRect(9.5f,13,14.5f,21,1,1,paint);
+                c.drawRoundRect(17,13,22,21,1,1,paint);break;
             case "widgets":
                 c.drawRoundRect(3,3,10,10,1.5f,1.5f,paint);c.drawRoundRect(14,3,21,10,1.5f,1.5f,paint);
                 c.drawRoundRect(3,14,10,21,1.5f,1.5f,paint);c.drawRoundRect(14,14,21,21,1.5f,1.5f,paint);break;
