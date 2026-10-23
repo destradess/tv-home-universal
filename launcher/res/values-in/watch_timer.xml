@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="watch_enabled">Aktifkan Timer</string>
+    <string name="watch_duration">Durasi (menit)</string>
+    <string name="watch_remaining">Sisa waktu:</string>
+    <string name="watch_off">Timer nonaktif</string>
+    <string name="watch_start">Mulai / Ulangi Timer</string>
+    <string name="watch_countdown">TV akan tidur dalam %1$d detik</string>
+    <string name="watch_cancel">Batalkan Tidur</string>
+    <string name="watch_accessibility">Aktifkan aksesibilitas TV Home untuk memakai Timer Menonton.</string>
+    <string name="watch_failed">Timer gagal berjalan atau mengirim perintah tidur. Periksa aksesibilitas.</string>
+    <string name="watch_hint">Hitung mundur 30 detik muncul sebelum TV tidur.</string>
+    <string name="watch_title">Timer Menonton</string>
+    <string name="watch_sleep">Tidur</string>
+    <string name="watch_cancel_action">Batal</string>
+<string name="watch_requires_android9">Timer Menonton memerlukan Android 9 atau lebih baru.</string><string name="watch_alarm_permission">Izinkan alarm dan pengingat di pengaturan sistem, lalu mulai timer lagi.</string></resources>
