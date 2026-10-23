@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="watch_enabled">Enable Timer</string>
+    <string name="watch_duration">Duration (minutes)</string>
+    <string name="watch_remaining">Remaining:</string>
+    <string name="watch_off">Timer off</string>
+    <string name="watch_start">Start / Restart Timer</string>
+    <string name="watch_countdown">TV will sleep in %1$d seconds</string>
+    <string name="watch_cancel">Cancel Sleep</string>
+    <string name="watch_accessibility">Enable TV Home accessibility to use Watch Timer.</string>
+    <string name="watch_failed">Timer could not run or send the sleep command. Check accessibility.</string>
+    <string name="watch_hint">A 30-second countdown appears before the TV sleeps.</string>
+    <string name="watch_title">Watch Timer</string>
+    <string name="watch_sleep">Sleep</string>
+    <string name="watch_cancel_action">Cancel</string>
+<string name="watch_requires_android9">Watch Timer requires Android 9 or newer.</string><string name="watch_alarm_permission">Allow alarms and reminders in system settings, then start the timer again.</string></resources>

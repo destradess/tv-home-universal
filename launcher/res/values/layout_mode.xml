@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="layout_mode">App Layout</string>
+    <string name="layout_horizontal">Horizontal</string>
+    <string name="layout_classic">Classic</string>
+</resources>
