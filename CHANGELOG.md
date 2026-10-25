@@ -1,3 +1,12 @@
+# 0.2.1 preview
+
+- Keep Quick Settings → Watch Timer inside the existing accessibility overlay.
+- Back returns from Watch Timer to Quick Settings without bringing Home forward.
+- Restore Settings and the selected row after leaving Activity submenus such as Sound Effects.
+- Restore Settings on Back from first-level Widgets, App Layout and App Order popups.
+- Share timer UI and clean up its refresh callbacks when closing the panel.
+- Build/signature and host logic checks passed; physical-TV verification remains pending.
+
 # 0.2.0 preview
 
 - Persistent Classic / Horizontal app layout choice, with distinct icons and shared app order.

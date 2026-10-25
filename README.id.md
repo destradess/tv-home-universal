@@ -14,9 +14,13 @@ Launcher minimalis untuk Android TV dan Google TV dengan tampilan liquid glass, 
 
 
 
-> **Preview 0.2.0** — Menargetkan Android TV / Google TV 8.0+ (API 26). APK berhasil dibangun dan pemeriksaan logika lolos, tetapi versi universal ini belum diuji pada TV fisik. Dukungan fitur bergantung pada firmware setiap merek.
+> **Preview 0.2.1** — Menargetkan Android TV / Google TV 8.0+ (API 26). APK berhasil dibangun dan pemeriksaan logika lolos, tetapi versi universal ini belum diuji pada TV fisik. Dukungan fitur bergantung pada firmware setiap merek.
 
 
+
+## Perbaikan navigasi 0.2.1
+
+Timer Menonton kini dibuka di dalam overlay Quick Settings tanpa membawa Home ke depan aplikasi lain. Back kembali ke Quick Settings. Back dari Efek Suara dan submenu Settings berbasis Activity mengembalikan Settings dengan pilihan terakhir. Pengujian langsung di TV masih diperlukan. Lihat [catatan rilis](RELEASE-NOTES-0.2.1.md).
 
 ## Fitur utama
 

@@ -14,9 +14,13 @@ A minimal launcher for Android TV and Google TV, featuring a liquid glass interf
 
 
 
-> **Preview 0.2.0** — Targets Android TV / Google TV 8.0+ (API 26). The APK builds and passes host logic checks, but this universal preview has not been tested on physical TVs. Features and Home-button behavior depend on manufacturer firmware.
+> **Preview 0.2.1** — Targets Android TV / Google TV 8.0+ (API 26). The APK builds and passes host logic checks, but this universal preview has not been tested on physical TVs. Features and Home-button behavior depend on manufacturer firmware.
 
 
+
+## Navigation fixes in 0.2.1
+
+Watch Timer now opens inside the Quick Settings overlay without bringing Home in front of another app. Back returns to Quick Settings. Back from Sound Effects and other Settings Activity submenus restores Settings with the previous row selected. Device verification is still pending. See [release notes](RELEASE-NOTES-0.2.1.md).
 
 ## Features
 
