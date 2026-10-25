@@ -29,7 +29,8 @@ final class QuickSettingsPanel {
     private FrameLayout root;
     private final Handler handler=new Handler(Looper.getMainLooper());
     private TextView date, clock;
-    private View first;
+    private View first, timerTile, menuView, timerView;
+    private WatchTimerSettingsPanel timerPanel;
     private final Runnable tick=new Runnable() {
         public void run() {
             Date now=new Date(); Locale id=UiText.locale();
@@ -45,7 +46,7 @@ final class QuickSettingsPanel {
             @Override public boolean dispatchKeyEvent(KeyEvent event) {
                 NavigationSound.key(context,event,findFocus());
                 if(event.getKeyCode()==KeyEvent.KEYCODE_BACK) {
-                    if(event.getAction()==KeyEvent.ACTION_UP)dismiss.run();
+                    if(event.getAction()==KeyEvent.ACTION_UP&&!event.isCanceled())back();
                     return true;
                 }
                 return super.dispatchKeyEvent(event);
@@ -53,11 +54,11 @@ final class QuickSettingsPanel {
         };
         NavigationSound.attach(root);
         root.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN|View.SYSTEM_UI_FLAG_HIDE_NAVIGATION|View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
-        root.setOnClickListener(v -> dismiss.run());
+        root.setOnClickListener(v -> back());
         ScrollView scroll=new ScrollView(context); scroll.setFillViewport(false); scroll.setClipToOutline(true);
         scroll.setBackground(GlassMenu.background(context)); scroll.setOnClickListener(v -> {});
         FrameLayout.LayoutParams panelParams=new FrameLayout.LayoutParams(dp(320),-2,Gravity.END|Gravity.TOP);
-        panelParams.setMargins(dp(16),dp(16),dp(16),dp(16)); root.addView(scroll,panelParams);
+        panelParams.setMargins(dp(16),dp(16),dp(16),dp(16)); root.addView(scroll,panelParams);menuView=scroll;
         LinearLayout panel=new LinearLayout(context); panel.setOrientation(LinearLayout.VERTICAL); panel.setPadding(dp(16),dp(16),dp(16),dp(16));
         scroll.addView(panel,new ScrollView.LayoutParams(-1,-2));
         LinearLayout header=new LinearLayout(context); header.setGravity(Gravity.CENTER_VERTICAL);
@@ -76,12 +77,12 @@ final class QuickSettingsPanel {
             for(int col=0;col<2;col++) {
                 final int index=row*2+col;
                 TextView tile=tile(names[index], () -> {
-                    if(targets[index]==-1)launch(new Intent(context,WatchTimerSettingsActivity.class).putExtra("popup_quick_position",true));
+                    if(targets[index]==-1)showTimer();
                     else if(targets[index]==-2)launch(new Intent(context,LanguageSettingsActivity.class));
                     else open(targets[index]);
                 });
                 MenuIcon.attach(tile,icons[index],19,Color.WHITE);
-                if(targets[index]==-1){tile.setTextSize(12);tile.setMaxLines(2);}
+                if(targets[index]==-1){timerTile=tile;tile.setTextSize(12);tile.setMaxLines(2);}
                 LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(0,dp(58),1);
                 lp.setMargins(col==0?0:dp(5),row==0?dp(16):dp(8),col==0?dp(5):0,0);
                 line.addView(tile,lp); if(index==0) first=tile;
@@ -90,6 +91,27 @@ final class QuickSettingsPanel {
         }
         TextView footer=label(10); footer.setText("TV Home"); footer.setTextColor(0x99FFFFFF); footer.setPadding(0,dp(12),0,0); panel.addView(footer);
 
+    }
+    private void showTimer(){
+        if(timerPanel!=null)return;
+        handler.removeCallbacks(tick);
+        timerPanel=new WatchTimerSettingsPanel(context,intent->launch(intent));
+        timerView=SettingsPopup.content(context,UiText.get(R.string.watch_title),timerPanel.view());
+        timerView.setOnClickListener(v->{});
+        FrameLayout.LayoutParams params=new FrameLayout.LayoutParams(dp(244),-2,Gravity.END|Gravity.TOP);
+        params.setMargins(dp(16),dp(16),dp(16),dp(16));
+        menuView.setVisibility(View.GONE);
+        root.addView(timerView,params);
+        timerPanel.resume();timerPanel.focus().requestFocus();
+        NavigationSound.event(context,NavigationSound.OPEN);
+    }
+    private void back(){
+        if(timerPanel==null){dismiss.run();return;}
+        timerPanel.pause();timerPanel=null;
+        root.removeView(timerView);timerView=null;
+        menuView.setVisibility(View.VISIBLE);timerTile.requestFocus();
+        handler.removeCallbacks(tick);handler.post(tick);
+        NavigationSound.event(context,NavigationSound.CLOSE);
     }
     private void open(int index) {
         boolean opened=false;
@@ -118,6 +140,6 @@ final class QuickSettingsPanel {
     private TextView label(int size) {TextView v=new TextView(context);v.setTextColor(Color.WHITE);v.setTextSize(size);return v;}
     private int dp(int n) {return Math.round(n*context.getResources().getDisplayMetrics().density);}
     View view(){return root;}
-    void start(){NavigationSound.event(context,NavigationSound.SIDE_OPEN);handler.removeCallbacks(tick);handler.post(tick);first.requestFocus();}
-    void stop(){NavigationSound.event(context,NavigationSound.SIDE_CLOSE);handler.removeCallbacksAndMessages(null);}
+    void start(){NavigationSound.event(context,NavigationSound.SIDE_OPEN);handler.removeCallbacks(tick);if(timerPanel!=null){timerPanel.resume();timerPanel.focus().requestFocus();}else{handler.post(tick);first.requestFocus();}}
+    void stop(){NavigationSound.event(context,NavigationSound.SIDE_CLOSE);handler.removeCallbacksAndMessages(null);if(timerPanel!=null)timerPanel.pause();}
 }

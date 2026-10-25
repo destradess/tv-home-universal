@@ -1,6 +1,7 @@
 package io.github.tvhome.universal;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.view.Gravity;
 import android.view.View;
@@ -39,6 +40,10 @@ final class SettingsPopup {
         });
     }
     private static PopupWindow create(Activity activity,String title,View body,View focus,Runnable onDismiss){
+        View shell=content(activity,title,body);
+        PopupWindow popup=new PopupWindow(shell,dp(activity,width(title)),-2,true);popup.setOutsideTouchable(true);popup.setElevation(dp(activity,16));popup.setOnDismissListener(()->{NavigationSound.event(activity,NavigationSound.CLOSE);onDismiss.run();});return popup;
+    }
+    static View content(Context activity,String title,View body){
         GlassControls.apply(body);
         if(UiText.get(R.string.watch_title).equals(title)||UiText.get(R.string.navigation_sound).equals(title)||UiText.get(R.string.wallpaper_categories).equals(title)||UiText.get(R.string.language_title).equals(title)||compact(title)||UiText.get(R.string.ui_113).equals(title)||UiText.get(R.string.ui_069).equals(title))GlassControls.focusOnlyRows(body);
         sizeRows(activity,body);
@@ -51,9 +56,9 @@ final class SettingsPopup {
         scroll.addView(body,new ScrollView.LayoutParams(-1,-2));
         body.measure(View.MeasureSpec.makeMeasureSpec(dp(activity,width(title)-16),View.MeasureSpec.EXACTLY),View.MeasureSpec.makeMeasureSpec(0,View.MeasureSpec.UNSPECIFIED));
         shell.addView(scroll,new LinearLayout.LayoutParams(-1,Math.min(dp(activity,240),Math.max(dp(activity,36),body.getMeasuredHeight()))));
-        PopupWindow popup=new PopupWindow(shell,dp(activity,width(title)),-2,true);popup.setOutsideTouchable(true);popup.setElevation(dp(activity,16));popup.setOnDismissListener(()->{NavigationSound.event(activity,NavigationSound.CLOSE);onDismiss.run();});return popup;
+        return shell;
     }
-    private static void sizeRows(Activity activity,View view){
+    private static void sizeRows(Context activity,View view){
         if(view instanceof android.view.ViewGroup){
             android.view.ViewGroup group=(android.view.ViewGroup)view;
             for(int i=0;i<group.getChildCount();i++)sizeRows(activity,group.getChildAt(i));
@@ -76,5 +81,5 @@ final class SettingsPopup {
     }
     private static boolean compact(String title){return UiText.get(R.string.ui_091).equals(title)||UiText.get(R.string.ui_140).equals(title)||UiText.get(R.string.ui_143).equals(title);}
     private static int width(String title){return UiText.get(R.string.watch_title).equals(title)?244:UiText.get(R.string.navigation_sound).equals(title)?280:UiText.get(R.string.wallpaper_categories).equals(title)?244:UiText.get(R.string.language_title).equals(title)?280:UiText.get(R.string.ui_143).equals(title)||UiText.get(R.string.ui_069).equals(title)||UiText.get(R.string.ui_091).equals(title)?244:220;}
-    private static int dp(Activity activity,int n){return Math.round(n*activity.getResources().getDisplayMetrics().density);}
+    private static int dp(Context activity,int n){return Math.round(n*activity.getResources().getDisplayMetrics().density);}
 }

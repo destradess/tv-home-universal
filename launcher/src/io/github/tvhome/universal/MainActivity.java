@@ -180,6 +180,8 @@ public class MainActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
+        menuPaused=false;
+        if(settingsReturnPending){settingsReturnPending=false;returnToSettings();}
         cancelAppLaunchBounce();
         LauncherOverrideService.POLICY.returnToTvHome();
         IntentFilter tf = new IntentFilter(Intent.ACTION_TIME_TICK);
@@ -218,6 +220,7 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onPause() {
+        menuPaused=true;
         if(dockScroll!=null)dockScroll.stopPan();
         if(movingPackage!=null)finishDirectMove(false,false);
         if (!appLaunchDispatched) cancelAppLaunchBounce();
@@ -243,6 +246,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
+        settingsReturnPending=false;settingsReturnRow=-1;
         if(movingPackage!=null)finishDirectMove(false,false);
         // Home pressed while already home: jump back to the first dock app.
         if (inputsPopup != null) inputsPopup.dismiss();
@@ -419,21 +423,7 @@ public class MainActivity extends Activity {
         wifiPill.setEllipsize(android.text.TextUtils.TruncateAt.END);
         wifiPill.setOnClickListener(v -> showNetworkMenu());
         TextView settings = pill(UiText.get(R.string.ui_118), "settings");
-        settings.setOnClickListener(v -> showCompactMenu(settings, UiText.get(R.string.ui_118),
-                new String[]{UiText.get(R.string.ui_117), UiText.get(R.string.ui_052), UiText.get(R.string.ui_091), UiText.get(R.string.ui_140), UiText.get(R.string.ui_143), UiText.get(R.string.ui_104), UiText.get(R.string.ui_113), UiText.get(R.string.ui_137), UiText.get(R.string.navigation_sound), UiText.get(R.string.layout_mode), UiText.get(R.string.watch_title), UiText.get(R.string.ui_119)}, which -> {
-                    if (which == 0) launch(new Intent(Settings.ACTION_SETTINGS));
-                    else if (which == 1) showInputs(settings);
-                    else if (which == 2) startActivity(SettingsPopup.position(new Intent(this, OverrideSettingsActivity.class), settings));
-                    else if (which == 3) startActivity(SettingsPopup.position(new Intent(this, WallpaperSettingsActivity.class), settings));
-                    else if (which == 4) showWidgetSettings();
-                    else if (which == 5) startActivity(new Intent(this, QuickSettingsActivity.class));
-                    else if (which == 6) startActivity(SettingsPopup.position(new Intent(this, ScreensaverSettingsActivity.class), settings));
-                    else if (which == 7) showAppOrder();
-                    else if (which == 8) startActivity(SettingsPopup.position(new Intent(this, SoundSettingsActivity.class), settings));
-                    else if (which == 9) showLayoutMode();
-                    else if (which == 10) startActivity(SettingsPopup.position(new Intent(this,WatchTimerSettingsActivity.class),settings));
-                    else showShutdown();
-                }, "settings"));
+        settings.setOnClickListener(v -> showSettingsMenu(settings,0));
         orderAnchor = settings;
         for (TextView p : new TextView[]{wifiPill, settings}) {
             right.addView(p, llp(-2, dp(30), dp(10), 0, 0, 0));
@@ -629,8 +619,51 @@ public class MainActivity extends Activity {
         showCompactMenu(orderAnchor, heading, labels, action, "order");
     }
 
+    private static final int SETTINGS_PAGE=7602;
+    private int settingsReturnRow=-1;
+    private boolean settingsReturnPending, menuPaused=true;
+    private void openSettingsPage(Intent intent){
+        try{startActivityForResult(intent,SETTINGS_PAGE);}
+        catch(RuntimeException error){
+            android.widget.Toast.makeText(this,UiText.get(R.string.ui_088),android.widget.Toast.LENGTH_SHORT).show();
+            returnToSettings();
+        }
+    }
+    @Override protected void onActivityResult(int request,int result,Intent data){
+        super.onActivityResult(request,result,data);
+        if(request==SETTINGS_PAGE&&settingsReturnRow>=0)settingsReturnPending=true;
+    }
+    private void returnToSettings(){
+        if(settingsReturnRow<0||menuPaused||isFinishing())return;
+        int row=settingsReturnRow;settingsReturnRow=-1;
+        orderAnchor.post(()->{if(!menuPaused&&!isFinishing())showSettingsMenu(orderAnchor,row);});
+    }
+    private void showSettingsMenu(View settings,int selectedRow){
+        showCompactMenu(settings, UiText.get(R.string.ui_118),
+                new String[]{UiText.get(R.string.ui_117), UiText.get(R.string.ui_052), UiText.get(R.string.ui_091), UiText.get(R.string.ui_140), UiText.get(R.string.ui_143), UiText.get(R.string.ui_104), UiText.get(R.string.ui_113), UiText.get(R.string.ui_137), UiText.get(R.string.navigation_sound), UiText.get(R.string.layout_mode), UiText.get(R.string.watch_title), UiText.get(R.string.ui_119)}, which -> {
+                    settingsReturnRow=which;
+                    if (which == 0) openSettingsPage(new Intent(Settings.ACTION_SETTINGS));
+                    else if (which == 1) openSettingsPage(SettingsPopup.position(new Intent(this,InputsActivity.class),settings));
+                    else if (which == 2) openSettingsPage(SettingsPopup.position(new Intent(this, OverrideSettingsActivity.class), settings));
+                    else if (which == 3) openSettingsPage(SettingsPopup.position(new Intent(this, WallpaperSettingsActivity.class), settings));
+                    else if (which == 4) showWidgetSettings();
+                    else if (which == 5) openSettingsPage(new Intent(this, QuickSettingsActivity.class));
+                    else if (which == 6) openSettingsPage(SettingsPopup.position(new Intent(this, ScreensaverSettingsActivity.class), settings));
+                    else if (which == 7) showAppOrder();
+                    else if (which == 8) openSettingsPage(SettingsPopup.position(new Intent(this, SoundSettingsActivity.class), settings));
+                    else if (which == 9) showLayoutMode();
+                    else if (which == 10) openSettingsPage(SettingsPopup.position(new Intent(this,WatchTimerSettingsActivity.class),settings));
+                    else showShutdown();
+                }, "settings",selectedRow);
+    }
+
+
     private void showCompactMenu(View anchor, String heading, String[] labels,
             java.util.function.IntConsumer action, String icon) {
+        showCompactMenu(anchor,heading,labels,action,icon,0);
+    }
+    private void showCompactMenu(View anchor,String heading,String[] labels,
+            java.util.function.IntConsumer action,String icon,int selectedRow){
         if (labels.length == 0 || anchor == null) return;
         if (orderPopup != null) orderPopup.dismiss();
         LinearLayout panel = NavigationSound.panel(this);
@@ -652,6 +685,7 @@ public class MainActivity extends Activity {
         panel.addView(scroller, new LinearLayout.LayoutParams(-1, dp(36 * Math.min(6, labels.length))));
         NavigationSound.attach(panel);
         PopupWindow popup = new PopupWindow(panel, dp(220), -2, true);
+        final boolean[] chosen={false};
         List<TextView> rows = new ArrayList<>();
         for (int i = 0; i < labels.length; i++) {
             final int index = i;
@@ -670,7 +704,7 @@ public class MainActivity extends Activity {
             TextView row = inputRow(labels[i], rowIcon, () -> {});
             row.setSingleLine(true);
             row.setEllipsize(android.text.TextUtils.TruncateAt.END);
-            row.setOnClickListener(v -> { popup.dismiss(); action.accept(index); });
+            row.setOnClickListener(v -> { chosen[0]=true;popup.dismiss(); action.accept(index); });
             if("network".equals(icon)&&index==0){
                 row.setOnLongClickListener(v->{
                     popup.dismiss();
@@ -693,11 +727,13 @@ public class MainActivity extends Activity {
             NavigationSound.event(this,NavigationSound.CLOSE);
             if (orderPopup == popup) orderPopup = null;
             anchor.requestFocus();
+            if(!chosen[0]&&!"settings".equals(icon))returnToSettings();
+            if(!chosen[0]&&"settings".equals(icon))settingsReturnRow=-1;
         });
         orderPopup = popup;
         popup.showAsDropDown(anchor, 0, dp(8), Gravity.START);
         NavigationSound.event(this,NavigationSound.OPEN);
-        rows.get(0).requestFocus();
+        rows.get(Math.max(0,Math.min(selectedRow,rows.size()-1))).requestFocus();
     }
 
     private void showNetworkMenu() {
@@ -1103,10 +1139,11 @@ public class MainActivity extends Activity {
             });
         }
         final PopupWindow[] widgetPopup = new PopupWindow[1];
-        location.setOnClickListener(v -> { widgetPopup[0].dismiss(); prayerWidget.settings(); });
-        editGreeting.setOnClickListener(v -> { widgetPopup[0].dismiss(); showGreetingEditor(); });
+        final boolean[] widgetChild={false};
+        location.setOnClickListener(v -> { widgetChild[0]=true;widgetPopup[0].dismiss(); prayerWidget.settings(); });
+        editGreeting.setOnClickListener(v -> { widgetChild[0]=true;widgetPopup[0].dismiss(); showGreetingEditor(); });
         widgetPopup[0] = SettingsPopup.at(this, orderAnchor, UiText.get(R.string.ui_143), panel, toggles[0],
-                () -> { orderPopup=null;orderAnchor.requestFocus(); });
+                () -> { orderPopup=null;orderAnchor.requestFocus();if(!widgetChild[0])returnToSettings(); });
         orderPopup=widgetPopup[0];
     }
 
